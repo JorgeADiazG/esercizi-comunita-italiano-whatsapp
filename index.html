@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test Progressivo d'Italiano (A1 – C2)</title>
+  <style>
+    :root {
+      --verde: #008C45;
+      --blanco: #F4F5F0;
+      --rojo: #CD212A;
+      --oscuro: #1e293b;
+      --gris: #64748b;
+      --borde: #e2e8f0;
+      --fondo: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--fondo);
+      color: var(--oscuro);
+      line-height: 1.6;
+      padding: 16px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .contenedor {
+      width: 100%;
+      max-width: 640px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      border: 1px solid var(--borde);
+    }
+
+    .bandera {
+      display: flex;
+      height: 6px;
+      width: 100%;
+    }
+    .bandera div:nth-child(1) { flex: 1; background: var(--verde); }
+    .bandera div:nth-child(2) { flex: 1; background: #ffffff; }
+    .bandera div:nth-child(3) { flex: 1; background: var(--rojo); }
+
+    header {
+      padding: 20px 24px 12px;
+      border-bottom: 1px solid var(--borde);
+    }
+
+    header h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--oscuro);
+    }
+
+    header p {
+      font-size: 0.9rem;
+      color: var(--gris);
+      margin-top: 4px;
+    }
+
+    .pantalla {
+      display: none;
+      padding: 24px;
+    }
+
+    .pantalla.activa {
+      display: block;
+    }
+
+    .aviso-instruccion {
+      background: #f1f5f9;
+      border-left: 4px solid var(--verde);
+      padding: 12px 14px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      margin-bottom: 18px;
+      color: #334155;
+    }
+
+    /* Contenedor de lectura con control de scroll */
+    .caja-lectura {
+      max-height: 52vh;
+      overflow-y: auto;
+      padding: 16px;
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      background: #ffffff;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .caja-lectura p {
+      margin-bottom: 16px;
+    }
+
+    .caja-lectura p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Reproductor de audio */
+    .caja-audio {
+      padding: 20px;
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      background: #f8fafc;
+      text-align: center;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .indicador-scroll {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--gris);
+      margin-top: 12px;
+    }
+
+    /* Botones */
+    .btn {
+      width: 100%;
+      padding: 14px 18px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-top: 16px;
+    }
+
+    .btn-primario {
+      background: var(--verde);
+      color: white;
+    }
+
+    .btn-primario:disabled {
+      background: #cbd5e1;
+      color: #64748b;
+      cursor: not-allowed;
+    }
+
+    .btn-volver {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f1f5f9;
+      color: var(--oscuro);
+      border: 1px solid var(--borde);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 18px;
+    }
+
+    .btn-volver:hover {
+      background: #e2e8f0;
+    }
+
+    /* Preguntas */
+    .pregunta-card {
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .pregunta-card:last-of-type {
+      border-bottom: none;
+    }
+
+    .pregunta-titulo {
+      font-weight: 600;
+      font-size: 0.98rem;
+      margin-bottom: 10px;
+    }
+
+    .opcion {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--borde);
+      border-radius: 8px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      font-size: 0.94rem;
+      transition: background 0.15s;
+    }
+
+    .opcion:hover {
+      background: #f8fafc;
+    }
+
+    .opcion input {
+      margin-top: 4px;
+      accent-color: var(--verde);
+    }
+
+    /* Resultados */
+    .resultado-box {
+      text-align: center;
+      padding: 20px 16px;
+      background: #f8fafc;
+      border-radius: 12px;
+      border: 1px solid var(--borde);
+    }
+
+    .badge-nivel {
+      display: inline-block;
+      background: var(--verde);
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 800;
+      padding: 8px 24px;
+      border-radius: 50px;
+      margin: 10px 0;
+    }
+
+    .registro-retroceso {
+      margin-top: 14px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .sin-retroceso {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .con-retroceso {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .desglose {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .item-desglose {
+      padding: 10px 12px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      font-size: 0.88rem;
+      border: 1px solid var(--borde);
+    }
+
+    .item-desglose.ok {
+      border-left: 4px solid var(--verde);
+      background: #f0fdf4;
+    }
+
+    .item-desglose.mal {
+      border-left: 4px solid var(--rojo);
+      background: #fef2f2;
+    }
+  </style>
+</head>
+<body>
+
+<div class="contenedor">
+  <div class="bandera"><div></div><div></div><div></div></div>
+
+  <header>
+    <h1 id="titulo-actividad">Sfida di Lettura Progressiva (A1 → C2)</h1>
+    <p id="subtitulo-actividad">Lee con atención hasta el final. Al pasar a las preguntas, el texto quedará oculto.</p>
+  </header>
+
+  <!-- PANTALLA 1: ESTÍMULO (TEXTO O AUDIO) -->
+  <section id="pantalla-estimulo" class="pantalla activa">
+    <div class="aviso-instruccion" id="instruccion-estimulo">
+      Desliza hasta el final del texto para habilitar el botón de preguntas. Si regresas durante el cuestionario, quedará registrado en tu resultado final.
+    </div>
+
+    <!-- MODO TEXTO -->
+    <div id="contenedor-texto" class="caja-lectura">
+      <p>Marco è un turista spagnolo a Roma. Oggi entra in un bar vicino al Colosseo perché ha molta fame e vuole fare colazione. Chiede un caffè e un cornetto al cioccolato. Il barista è gentile e prepara tutto velocemente.</p>
+      <p>Mentre Marco mangiava, ha visto una signora elegante accanto a lui che leggeva il giornale. Quando ha finito, ha messo la mano in tasca per pagare, ma non ha trovato il portafoglio. Lo aveva dimenticato in albergo!</p>
+      <p>Marco si è sentito molto imbarazzato e ha pensato: "Se non pago subito, il barista chiamerà la polizia". Così, gli ha spiegato la situazione e gli ha chiesto se poteva lasciare il suo orologio come garanzia finché non fosse tornato con i soldi.</p>
+      <p>Il barista, invece di arrabbiarsi, si è messo a ridere di gusto. Gli ha detto che non c'era bisogno che lasciasse nulla, purché tornasse prima della chiusura. Marco ha tirato un sospiro di sollievo, rendendosi conto di essersi fasciato la testa prima di rompersela.</p>
+      <p>Avendo recuperato il denaro in albergo, Marco si affrettò a tornare al locale per saldare il conto, desideroso di sdebitarsi per la squisita cortesia ricevuta. Tuttavia, giunto sul posto, apprese con stupore che la signora del giornale aveva già provveduto a estinguere il suo debito, lasciandogli persino un biglietto di benvenuto.</p>
+      <p>Quell'episodio fortuito, lungi dall'esaurirsi in un mero atto di magnanimità estemporanea, finì per scardinare ogni pregiudizio che Marco nutrisse nei confronti della diffidenza metropolitana, inducendolo a riflettere su quanto l'altrui benevolenza sappia talvolta disinnescare le più paranoiche congetture.</p>
+      <div id="marca-final" style="height: 4px;"></div>
+    </div>
+
+    <!-- MODO AUDIO (Oculto por defecto; se activa cambiando MODO = "audio" en el script) -->
+    <div id="contenedor-audio" class="caja-audio" style="display: none;">
+      <p><strong>Ascolta la storia con attenzione</strong></p>
+      <audio id="reproductor-audio" controls preload="metadata">
+        <source id="fuente-audio" src="audio_historia.mp3" type="audio/mpeg" />
+        Tu navegador no soporta audio HTML5.
+      </audio>
+    </div>
+
+    <div class="indicador-scroll" id="estado-lectura">
+      ↓ Llega hasta el final del texto para continuar
+    </div>
+
+    <button id="btn-ir-preguntas" class="btn btn-primario" disabled>
+      Pasar a las preguntas →
+    </button>
+  </section>
+
+  <!-- PANTALLA 2: PREGUNTAS -->
+  <section id="pantalla-preguntas" class="pantalla">
+    <button id="btn-volver-estimulo" class="btn-volver">
+      ← Volver al texto para releer
+    </button>
+
+    <form id="form-preguntas"></form>
+
+    <button id="btn-evaluar" class="btn btn-primario">
+      Ver mi nivel de italiano
+    </button>
+  </section>
+
+  <!-- PANTALLA 3: RESULTADOS -->
+  <section id="pantalla-resultados" class="pantalla">
+    <div class="resultado-box">
+      <p style="font-size: 0.9rem; color: var(--gris);">Tu nivel de comprensión demostrado:</p>
+      <div class="badge-nivel" id="nivel-final">B1</div>
+      <p id="resumen-aciertos" style="font-weight: 600;"></p>
+      <div id="badge-retroceso" class="registro-retroceso"></div>
+    </div>
+
+    <div class="desglose" id="lista-desglose"></div>
+  </section>
+</div>
+
+<script>
+  // =========================================================================
+  // CONFIGURACIÓN RÁPIDA DEL EJERCICIO (Edita aquí cada semana)
+  // =========================================================================
+  const CONFIG = {
+    webhookUrl: "https://script.google.com/macros/s/AKfycbyDnBcARqbAXn0gGI_tcERjdSXiWR01V9oPxSxDW86_mqnkStkXWslGKLNI8yMQDHiX/exec",
+    actividad: "Reto 01 - Marco a Roma",
+    modo: "texto", // Cambia a "audio" cuando quieras hacer comprensión auditiva
+    archivoAudio: "historia_01.mp3", // Nombre del MP3 si modo === "audio"
+    preguntas: [
+      {
+        nivel: "A1",
+        pregunta: "1. Cosa ordina Marco al bar?",
+        opciones: [
+          "Un tè e un panino.",
+          "Un caffè e un cornetto.",
+          "Solo un bicchiere d'acqua."
+        ],
+        correcta: 1,
+        explicacion: "En el primer párrafo (A1): 'Chiede un caffè e un cornetto al cioccolato'."
+      },
+      {
+        nivel: "A2",
+        pregunta: "2. Dov'era il portafoglio di Marco?",
+        opciones: [
+          "Nella tasca della signora.",
+          "Sul tavolo del bar.",
+          "In albergo."
+        ],
+        correcta: 2,
+        explicacion: "Uso de trapassato prossimo (A2): 'Lo aveva dimenticato in albergo!'."
+      },
+      {
+        nivel: "B1",
+        pregunta: "3. Cosa propone Marco al barista per risolvere il problema?",
+        opciones: [
+          "Di lasciare il suo orologio finché non torna con i soldi.",
+          "Di chiamare la polizia insieme.",
+          "Di lavare i piatti del bar."
+        ],
+        correcta: 0,
+        explicacion: "Oración subordinada con congiuntivo trapassato (B1): 'lasciare il suo orologio come garanzia finché non fosse tornato con i soldi'."
+      },
+      {
+        nivel: "B2",
+        pregunta: "4. Cosa significa che Marco 'si era fasciato la testa prima di rompersela'?",
+        opciones: [
+          "Che si era fatto male mentre correva.",
+          "Che si era preoccupato troppo in anticipo senza motivo.",
+          "Che il barista gli aveva dato un colpo."
+        ],
+        correcta: 1,
+        explicacion: "Modismo idiomático (B2): 'fasciarsi la testa prima di rompersela' equivale a preocuparse antes de tiempo."
+      },
+      {
+        nivel: "C1",
+        pregunta: "5. Chi ha pagato alla fine la colazione di Marco?",
+        opciones: [
+          "Nessuno, il barista gliel'ha offerta.",
+          "La signora che leggeva il giornale.",
+          "Marco stesso quando è tornato."
+        ],
+        correcta: 1,
+        explicacion: "Léxico formal (C1): 'la signora del giornale aveva già provveduto a estinguere il suo debito'."
+      },
+      {
+        nivel: "C2",
+        pregunta: "6. Qual è stata la conseguenza profonda di questo episodio per Marco?",
+        opciones: [
+          "Ha deciso di non portare mai più contanti con sé.",
+          "Ha cambiato idea sulla presunta diffidenza delle grandi città.",
+          "Ha capito che i gesti generosi sono sempre interessati."
+        ],
+        correcta: 1,
+        explicacion: "Registro literario (C2): 'scardinare ogni pregiudizio che Marco nutrisse nei confronti della diffidenza metropolitana'."
+      }
+    ]
+  };
+
+  // =========================================================================
+  // IDENTIFICACIÓN DEL ALUMNO POR URL (?id=...&n=...) Y RASTREO SILENCIOSO
+  // =========================================================================
+  const paramsUrl = new URLSearchParams(window.location.search);
+  const alumnoId = paramsUrl.get("id") || "sin_id";
+  const alumnoNombre = paramsUrl.get("n") || "Anónimo";
+
+  function registrarEvento(datos) {
+    if (!CONFIG.webhookUrl) return;
+    const payload = Object.assign({
+      actividad: CONFIG.actividad,
+      modo: CONFIG.modo,
+      id: alumnoId,
+      nombre: alumnoNombre
+    }, datos);
+
+    fetch(CONFIG.webhookUrl, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(payload)
+    }).catch(() => {});
+  }
+
+  // Registrar apertura del enlace
+  registrarEvento({
+    evento: "clic_enlace",
+    nivel: "-",
+    aciertos: "-",
+    retrocesos: 0,
+    errores: "-"
+  });
+
+  // =========================================================================
+  // LÓGICA DE NAVEGACIÓN, DETECCIÓN DE LECTURA/AUDIO Y CONTADOR DE RETROCESOS
+  // =========================================================================
+  let vecesRegreso = 0;
+  let estimuloCompletado = false;
+
+  const subtituloActividad = document.getElementById("subtitulo-actividad");
+  const pEstimulo = document.getElementById("pantalla-estimulo");
+  const pPreguntas = document.getElementById("pantalla-preguntas");
+  const pResultados = document.getElementById("pantalla-resultados");
+
+  const btnIrPreguntas = document.getElementById("btn-ir-preguntas");
+  const btnVolverEstimulo = document.getElementById("btn-volver-estimulo");
+  const estadoLectura = document.getElementById("estado-lectura");
+  const cajaLectura = document.getElementById("contenedor-texto");
+  const cajaAudio = document.getElementById("contenedor-audio");
+  const reproductor = document.getElementById("reproductor-audio");
+
+  function habilitarContinuar() {
+    if (!estimuloCompletado) {
+      estimuloCompletado = true;
+      btnIrPreguntas.disabled = false;
+      estadoLectura.textContent = "✓ Ya puedes pasar a las preguntas.";
+      estadoLectura.style.color = "var(--verde)";
+      estadoLectura.style.fontWeight = "600";
+    }
+  }
+
+  // Inicializar modo texto o modo audio
+  if (CONFIG.modo === "audio") {
+    document.getElementById("titulo-actividad").textContent = "Sfida d'Ascolto Progressivo (A1 → C2)";
+    subtituloActividad.textContent = "Escucha el audio completo. Al pasar a las preguntas, el reproductor quedará oculto.";
+    document.getElementById("instruccion-estimulo").textContent = "Escucha el audio hasta el final para habilitar las preguntas. Si regresas a escucharlo de nuevo, quedará registrado en tu diagnóstico.";
+    btnVolverEstimulo.textContent = "← Volver a escuchar el audio";
+    cajaLectura.style.display = "none";
+    cajaAudio.style.display = "block";
+    document.getElementById("fuente-audio").src = CONFIG.archivoAudio;
+    reproductor.load();
+    estadoLectura.textContent = "▶ Escucha el audio completo para continuar";
+
+    reproductor.addEventListener("ended", habilitarContinuar);
+  } else {
+    // Detectar cuando el alumno llega al final del texto (IntersectionObserver)
+    const observador = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        habilitarContinuar();
+      }
+    }, { root: cajaLectura, threshold: 0.9 });
+
+    observador.observe(document.getElementById("marca-final"));
+  }
+
+  // Renderizar preguntas
+  const formPreguntas = document.getElementById("form-preguntas");
+  CONFIG.preguntas.forEach((item, idx) => {
+    const div = document.createElement("div");
+    div.className = "pregunta-card";
+    div.innerHTML = `<div class="pregunta-titulo">${item.pregunta}</div>` +
+      item.opciones.map((op, opIdx) => `
+        <label class="opcion">
+          <input type="radio" name="preg_${idx}" value="${opIdx}" required />
+          <span>${op}</span>
+        </label>
+      `).join("");
+    formPreguntas.appendChild(div);
+  });
+
+  // Navegar a Preguntas
+  btnIrPreguntas.addEventListener("click", () => {
+    if (CONFIG.modo === "audio") reproductor.pause();
+    subtituloActividad.style.display = "none";
+    pEstimulo.classList.remove("activa");
+    pPreguntas.classList.add("activa");
+    window.scrollTo(0, 0);
+  });
+
+  // Regresar al Texto / Audio (Incrementa contador)
+  btnVolverEstimulo.addEventListener("click", () => {
+    vecesRegreso++;
+    subtituloActividad.style.display = "block";
+    pPreguntas.classList.remove("activa");
+    pEstimulo.classList.add("activa");
+    window.scrollTo(0, 0);
+  });
+
+  // Evaluar respuestas
+  document.getElementById("btn-evaluar").addEventListener("click", () => {
+    const respuestasUsuario = [];
+    for (let i = 0; i < CONFIG.preguntas.length; i++) {
+      const seleccionada = document.querySelector(`input[name="preg_${i}"]:checked`);
+      if (!seleccionada) {
+        alert("Por favor responde las 6 preguntas antes de ver tu resultado.");
+        return;
+      }
+      respuestasUsuario.push(parseInt(seleccionada.value, 10));
+    }
+
+    let aciertos = 0;
+    const nivelesFallados = [];
+    const desgloseHTML = CONFIG.preguntas.map((item, i) => {
+      const esCorrecta = respuestasUsuario[i] === item.correcta;
+      if (esCorrecta) {
+        aciertos++;
+      } else {
+        nivelesFallados.push(item.nivel);
+      }
+      return `
+        <div class="item-desglose ${esCorrecta ? 'ok' : 'mal'}">
+          <strong>[${item.nivel}] ${esCorrecta ? '✓ Correcto' : '✗ Incorrecto'}</strong><br/>
+          ${item.explicacion}
+        </div>
+      `;
+    }).join("");
+
+    const mapaNiveles = ["Pre-A1", "A1", "A2", "B1", "B2", "C1", "C2"];
+    const nivelObtenido = mapaNiveles[aciertos];
+
+    // Registrar resultado completo en Google Sheets
+    registrarEvento({
+      evento: "test_completado",
+      nivel: nivelObtenido,
+      aciertos: `${aciertos}/${CONFIG.preguntas.length}`,
+      retrocesos: vecesRegreso,
+      errores: nivelesFallados.length > 0 ? nivelesFallados.join(", ") : "Ninguno"
+    });
+
+    document.getElementById("nivel-final").textContent = nivelObtenido;
+    document.getElementById("resumen-aciertos").textContent = `Acertaste ${aciertos} de ${CONFIG.preguntas.length} niveles.`;
+
+    const badgeRetroceso = document.getElementById("badge-retroceso");
+    const accionTexto = CONFIG.modo === "audio" ? "volver a escuchar el audio" : "regresar a releer el texto";
+
+    if (vecesRegreso === 0) {
+      badgeRetroceso.className = "registro-retroceso sin-retroceso";
+      badgeRetroceso.textContent = `✓ Comprensión directa: completado sin necesidad de ${accionTexto}.`;
+    } else {
+      badgeRetroceso.className = "registro-retroceso con-retroceso";
+      const palabraVez = vecesRegreso === 1 ? "1 vez" : `${vecesRegreso} veces`;
+      badgeRetroceso.textContent = `↺ Nota: tuviste que ${accionTexto} (${palabraVez}) para responder.`;
+    }
+
+    document.getElementById("lista-desglose").innerHTML = desgloseHTML;
+
+    subtituloActividad.style.display = "none";
+    pPreguntas.classList.remove("activa");
+    pResultados.classList.add("activa");
+    window.scrollTo(0, 0);
+  });
+</script>
+</body>
+</html>
