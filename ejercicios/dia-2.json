@@ -1,0 +1,82 @@
+{
+  "actividad": "Reto 02 - Domenica bestiale (Fabio Concato)",
+  "titulo": "Sfida Musicale: Domenica bestiale (A1 → C2)",
+  "modo": "musica_y_texto",
+  "youtubeId": "M_20M1kzVSQ",
+  "parrafos": [
+    "Ascolta la canzone 'Domenica bestiale' di Fabio Concato e leggi questa scheda. È domenica mattina e un uomo porta la sua compagna al lago per passare una giornata insieme, lontano dal rumore della città.",
+    "La coppia fa un giro in barca e prova anche a pescare, immaginando di trovarsi in mezzo al mare aperto. Partono molto presto, quando Milano dorme ancora e le strade sono silenziose.",
+    "Lui la osserva mentre sonnecchia accanto a lui prima che inizi la frenesia della giornata. Nel linguaggio colloquiale italiano, l'aggettivo 'bestiale' non ha qui un senso negativo: significa 'straordinaria', 'meravigliosa', 'indimenticabile'.",
+    "Immersioni nella natura, complici e rilassati, i due si godono la semplicità di un pranzo all'aperto tra un fritto e un'insalata, lontano dagli impegni quotidiani che spesso soffocano il dialogo.",
+    "Attraverso immagini delicate e ironiche — come il confondere il profumo di un fiore con l'affetto per la persona amata — il cantautore milanese trasforma una semplice gita fuori porta in una dichiarazione d'amore spontanea e priva di retorica.",
+    "Pubblicato nel 1982, il brano si distingue nel panorama della canzone d'autore italiana per la sua capacità di coniugare intimismo domestico, eleganza acustica e un lessico quotidiano elevato a poesia civile degli affetti."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Dove porta l'uomo la sua compagna la domenica?",
+      "opciones": [
+        "In montagna a sciare.",
+        "Al lago.",
+        "Al museo in centro."
+      ],
+      "correcta": 1,
+      "explicacion": "En el primer párrafo (A1): 'un uomo porta la sua compagna al lago'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Quando partono i due protagonisti?",
+      "opciones": [
+        "Molto presto, mentre Milano dorme ancora.",
+        "Nel tardo pomeriggio, dopo pranzo.",
+        "A mezzanotte."
+      ],
+      "correcta": 0,
+      "explicacion": "Expresión temporal cotidiana (A2): 'Partono molto presto, quando Milano dorme ancora'."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Che cosa significa l'espressione 'domenica bestiale' nel contesto della canzone?",
+      "opciones": [
+        "Una domenica faticosa e piena di problemi.",
+        "Una domenica straordinaria, bellissima e fuori dal comune.",
+        "Una domenica dedicata solo agli animali."
+      ],
+      "correcta": 1,
+      "explicacion": "Uso coloquial positivo de 'bestiale' (B1): equivale a 'straordinaria' o 'meravigliosa'."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Che cos'è una 'gita fuori porta'?",
+      "opciones": [
+        "Una breve escursione fuori città durante il fine settimana.",
+        "Un trasloco in un altro paese.",
+        "Una cena formale in un ristorante di lusso."
+      ],
+      "correcta": 0,
+      "explicacion": "Modismo italiano (B2): 'gita fuori porta' designa una escapada corta fuera de la ciudad en día festivo."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Come viene descritta la dichiarazione d'amore presente nel testo della canzone?",
+      "opciones": [
+        "Drammatica e piena di rimpianti.",
+        "Spontanea, delicata e priva di retorica.",
+        "Distaccata e puramente ironica."
+      ],
+      "correcta": 1,
+      "explicacion": "Léxico crítico (C1): 'una dichiarazione d'amore spontanea e priva di retorica'."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Qual è la cifra stilistica che rende celebre questo brano nella canzone d'autore italiana?",
+      "opciones": [
+        "L'uso esclusivo del dialetto milanese arcaico.",
+        "La capacità di elevare l'intimismo domestico e il lessico quotidiano a poesia degli affetti.",
+        "La critica politica esplicita contro l'industrializzazione."
+      ],
+      "correcta": 1,
+      "explicacion": "Registro ensayístico (C2): 'coniugare intimismo domestico, eleganza acustica e un lessico quotidiano elevato a poesia civile degli affetti'."
+    }
+  ]
+}
