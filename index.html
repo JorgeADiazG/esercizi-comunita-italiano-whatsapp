@@ -86,32 +86,16 @@
       color: #334155;
     }
 
-    .caja-video {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      margin-bottom: 14px;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid var(--borde);
-      background: #000;
-    }
-
-    .caja-video iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
     .barra-audio {
       display: flex;
       align-items: center;
       gap: 8px;
       margin-bottom: 14px;
       flex-wrap: wrap;
+      background: #f8fafc;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--borde);
     }
 
     .btn-audio {
@@ -121,9 +105,9 @@
       background: #eff6ff;
       color: #1d4ed8;
       border: 1px solid #bfdbfe;
-      padding: 9px 14px;
+      padding: 8px 13px;
       border-radius: 8px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
       cursor: pointer;
       transition: background 0.15s;
@@ -143,6 +127,33 @@
       background: #fee2e2;
     }
 
+    .select-audio {
+      padding: 7px 10px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: var(--oscuro);
+      font-size: 0.84rem;
+      max-width: 210px;
+      cursor: pointer;
+    }
+
+    .caja-video {
+      margin-bottom: 14px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--borde);
+      background: #000000;
+      aspect-ratio: 16 / 9;
+    }
+
+    .caja-video iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
     .caja-lectura {
       max-height: 52vh;
       overflow-y: auto;
@@ -156,6 +167,13 @@
 
     .caja-lectura p {
       margin-bottom: 16px;
+      padding: 4px 6px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+
+    .caja-lectura p.leyendo {
+      background: #eff6ff;
     }
 
     .caja-lectura p:last-child {
@@ -317,7 +335,7 @@
 
   <header>
     <h1 id="titulo-actividad">Sfida di Lettura Progressiva (A1 → C2)</h1>
-    <p id="subtitulo-actividad">Lee o escucha con atención hasta el final. Al pasar a las preguntas, el texto quedará oculto.</p>
+    <p id="subtitulo-actividad">Lee o escucha con atención hasta el final. Al pasar a las preguntas, el contenido quedará oculto.</p>
   </header>
 
   <section id="pantalla-estimulo" class="pantalla activa">
@@ -325,17 +343,24 @@
       Desliza hasta el final del texto (o escúchalo completo) para habilitar las preguntas. Si regresas durante el cuestionario, quedará registrado en tu resultado final.
     </div>
 
-    <div id="contenedor-youtube" class="caja-video" style="display: none;">
-      <iframe id="iframe-youtube" src="" title="Canzone italiana" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div id="contenedor-video" class="caja-video" style="display: none;">
+      <iframe id="iframe-video" src="" title="Video musicale italiano" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <div class="barra-audio" id="barra-audio">
       <button type="button" id="btn-audio-toggle" class="btn-audio">
-        🔊 Escuchar texto en italiano
+        🔊 Escuchar
       </button>
       <button type="button" id="btn-audio-stop" class="btn-audio detener" style="display: none;">
         ⏹ Detener
       </button>
+      <select id="select-voz" class="select-audio" title="Elegir voz en italiano"></select>
+      <select id="select-velocidad" class="select-audio" title="Velocidad de lectura">
+        <option value="0.75">0.75x (Lento)</option>
+        <option value="0.88" selected>0.88x (Natural)</option>
+        <option value="1.0">1.0x (Normal)</option>
+        <option value="1.15">1.15x (Rápido)</option>
+      </select>
     </div>
 
     <div id="contenedor-texto" class="caja-lectura">
@@ -354,7 +379,7 @@
 
   <section id="pantalla-preguntas" class="pantalla">
     <button id="btn-volver-estimulo" class="btn-volver">
-      ← Volver al texto para releer / escuchar
+      ← Volver al material para revisar
     </button>
 
     <form id="form-preguntas"></form>
@@ -446,12 +471,15 @@
   let vecesRegreso = 0;
   let estimuloCompletado = false;
   let usoAudio = false;
+  let vocesItalianas = [];
+  let reproduciendoSecuencia = false;
+  let timerPausa = null;
 
   function registrarEvento(datos) {
     if (!WEBHOOK_URL || !CONFIG) return;
     const payload = Object.assign({
       actividad: CONFIG.actividad,
-      modo: CONFIG.youtubeId ? "cancion" : (usoAudio ? "audio" : (CONFIG.modo || "texto")),
+      modo: CONFIG.youtubeId ? "musica_y_texto" : (usoAudio ? "audio" : (CONFIG.modo || "texto")),
       id: alumnoId,
       nombre: alumnoNombre
     }, datos);
@@ -464,23 +492,81 @@
     }).catch(() => {});
   }
 
-  function obtenerVozItaliana() {
-    const voces = window.speechSynthesis.getVoices();
-    return voces.find(v => v.lang === "it-IT") || voces.find(v => v.lang.toLowerCase().startsWith("it")) || null;
+  function puntuarVoz(voz) {
+    const nombre = voz.name.toLowerCase();
+    let puntos = 0;
+    if (nombre.includes("natural") || nombre.includes("neural")) puntos += 50;
+    if (nombre.includes("online")) puntos += 30;
+    if (nombre.includes("google")) puntos += 25;
+    if (nombre.includes("elsa") || nombre.includes("isabella") || nombre.includes("diego") || nombre.includes("giuseppe")) puntos += 20;
+    if (!voz.localService) puntos += 15;
+    return puntos;
+  }
+
+  function poblarSelectorVoces() {
+    const selectVoz = document.getElementById("select-voz");
+    if (!selectVoz || !("speechSynthesis" in window)) return;
+
+    const todas = window.speechSynthesis.getVoices();
+    const filtradas = todas
+      .filter(v => v.lang && v.lang.toLowerCase().startsWith("it"))
+      .sort((a, b) => puntuarVoz(b) - puntuarVoz(a));
+
+    if (filtradas.length === 0) return;
+
+    const seleccionPrevia = selectVoz.value;
+    vocesItalianas = filtradas;
+    selectVoz.innerHTML = "";
+
+    vocesItalianas.forEach((voz, idx) => {
+      const opt = document.createElement("option");
+      opt.value = String(idx);
+      const etiquetaLimpia = voz.name
+        .replace(/Microsoft\s+/i, "")
+        .replace(/Online\s*\(Natural\)/i, "(Natural)")
+        .replace(/\s*-\s*Italian\s*\(Italy\)/i, "");
+      opt.textContent = `🎙️ ${etiquetaLimpia}`;
+      selectVoz.appendChild(opt);
+    });
+
+    if (seleccionPrevia && selectVoz.querySelector(`option[value="${seleccionPrevia}"]`)) {
+      selectVoz.value = seleccionPrevia;
+    }
+  }
+
+  function limpiarResaltadoParrafos() {
+    document.querySelectorAll("#parrafos-lectura p.leyendo").forEach(p => p.classList.remove("leyendo"));
   }
 
   function detenerAudio() {
+    reproduciendoSecuencia = false;
+    if (timerPausa) {
+      clearTimeout(timerPausa);
+      timerPausa = null;
+    }
     if ("speechSynthesis" in window) {
       window.speechSynthesis.cancel();
     }
+    limpiarResaltadoParrafos();
     const btnToggle = document.getElementById("btn-audio-toggle");
     const btnStop = document.getElementById("btn-audio-stop");
-    if (btnToggle) btnToggle.textContent = "🔊 Escuchar texto en italiano";
+    if (btnToggle) btnToggle.textContent = "🔊 Escuchar";
     if (btnStop) btnStop.style.display = "none";
   }
 
   function inicializarApp(data) {
     CONFIG = data;
+
+    if (CONFIG.titulo) {
+      document.getElementById("titulo-actividad").textContent = CONFIG.titulo;
+    }
+
+    if (CONFIG.youtubeId) {
+      const boxVideo = document.getElementById("contenedor-video");
+      const iframeVideo = document.getElementById("iframe-video");
+      iframeVideo.src = `https://www.youtube.com/embed/${encodeURIComponent(CONFIG.youtubeId)}?rel=0`;
+      boxVideo.style.display = "block";
+    }
 
     registrarEvento({
       evento: "clic_enlace",
@@ -502,6 +588,8 @@
     const barraAudio = document.getElementById("barra-audio");
     const btnAudioToggle = document.getElementById("btn-audio-toggle");
     const btnAudioStop = document.getElementById("btn-audio-stop");
+    const selectVoz = document.getElementById("select-voz");
+    const selectVelocidad = document.getElementById("select-velocidad");
 
     function habilitarContinuar() {
       if (!estimuloCompletado) {
@@ -513,60 +601,78 @@
       }
     }
 
-    if (CONFIG.titulo) {
-      document.getElementById("titulo-actividad").textContent = CONFIG.titulo;
-    }
-
-    if (CONFIG.youtubeId) {
-      const boxYt = document.getElementById("contenedor-youtube");
-      const iframeYt = document.getElementById("iframe-youtube");
-      iframeYt.src = `https://www.youtube.com/embed/${encodeURIComponent(CONFIG.youtubeId)}?rel=0`;
-      boxYt.style.display = "block";
-      btnAudioToggle.textContent = "🔊 Escuchar letra recitada";
-    }
-
     const contenedorParrafos = document.getElementById("parrafos-lectura");
-    contenedorParrafos.innerHTML = (CONFIG.parrafos || []).map(p => `<p>${p}</p>`).join("");
+    contenedorParrafos.innerHTML = (CONFIG.parrafos || []).map((p, idx) => `<p data-idx="${idx}">${p}</p>`).join("");
+
+    function leerParrafo(indice) {
+      if (!reproduciendoSecuencia) return;
+      const lista = CONFIG.parrafos || [];
+      if (indice >= lista.length) {
+        detenerAudio();
+        habilitarContinuar();
+        return;
+      }
+
+      limpiarResaltadoParrafos();
+      const nodoP = contenedorParrafos.querySelector(`p[data-idx="${indice}"]`);
+      if (nodoP) nodoP.classList.add("leyendo");
+
+      const utterance = new SpeechSynthesisUtterance(lista[indice]);
+      utterance.lang = "it-IT";
+      utterance.rate = parseFloat(selectVelocidad.value || "0.88");
+
+      const idxVoz = parseInt(selectVoz.value || "0", 10);
+      if (vocesItalianas[idxVoz]) {
+        utterance.voice = vocesItalianas[idxVoz];
+      }
+
+      utterance.onend = () => {
+        if (!reproduciendoSecuencia) return;
+        timerPausa = setTimeout(() => leerParrafo(indice + 1), 380);
+      };
+
+      utterance.onerror = () => {
+        detenerAudio();
+      };
+
+      window.speechSynthesis.speak(utterance);
+    }
 
     if ("speechSynthesis" in window) {
-      window.speechSynthesis.getVoices();
-      window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+      poblarSelectorVoces();
+      window.speechSynthesis.onvoiceschanged = poblarSelectorVoces;
 
       btnAudioToggle.addEventListener("click", () => {
         const synth = window.speechSynthesis;
-        if (synth.speaking && !synth.paused) {
+        if (reproduciendoSecuencia && !synth.paused) {
           synth.pause();
-          btnAudioToggle.textContent = "▶️ Reanudar audio";
+          btnAudioToggle.textContent = "▶️ Reanudar";
           return;
         }
-        if (synth.paused) {
+        if (reproduciendoSecuencia && synth.paused) {
           synth.resume();
-          btnAudioToggle.textContent = "⏸ Pausar audio";
+          btnAudioToggle.textContent = "⏸ Pausar";
           return;
         }
 
         usoAudio = true;
         synth.cancel();
-        const textoCompleto = (CONFIG.parrafos || []).join(" ");
-        const utterance = new SpeechSynthesisUtterance(textoCompleto);
-        utterance.lang = "it-IT";
-        utterance.rate = 0.95;
-        const vozIt = obtenerVozItaliana();
-        if (vozIt) utterance.voice = vozIt;
+        reproduciendoSecuencia = true;
+        btnAudioToggle.textContent = "⏸ Pausar";
+        btnAudioStop.style.display = "inline-flex";
+        leerParrafo(0);
+      });
 
-        utterance.onstart = () => {
-          btnAudioToggle.textContent = "⏸ Pausar audio";
-          btnAudioStop.style.display = "inline-flex";
-        };
-        utterance.onend = () => {
+      selectVoz.addEventListener("change", () => {
+        if (reproduciendoSecuencia) {
           detenerAudio();
-          habilitarContinuar();
-        };
-        utterance.onerror = () => {
-          detenerAudio();
-        };
+        }
+      });
 
-        synth.speak(utterance);
+      selectVelocidad.addEventListener("change", () => {
+        if (reproduciendoSecuencia) {
+          detenerAudio();
+        }
       });
 
       btnAudioStop.addEventListener("click", detenerAudio);
@@ -656,7 +762,7 @@
       document.getElementById("resumen-aciertos").textContent = `Acertaste ${aciertos} de ${CONFIG.preguntas.length} niveles.`;
 
       const badgeRetroceso = document.getElementById("badge-retroceso");
-      const accionTexto = CONFIG.youtubeId ? "volver a escuchar la canción / leer la letra" : (usoAudio ? "volver a escuchar el audio" : "regresar a releer el texto");
+      const accionTexto = CONFIG.youtubeId ? "volver a escuchar la canción o releer" : (usoAudio ? "volver a escuchar el audio" : "regresar a releer el texto");
 
       if (vecesRegreso === 0) {
         badgeRetroceso.className = "registro-retroceso sin-retroceso";
