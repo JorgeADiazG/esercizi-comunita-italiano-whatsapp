@@ -399,6 +399,17 @@
 
     <div class="desglose" id="lista-desglose"></div>
   </section>
+  <footer id="pie-baja" style="padding: 16px 24px 22px; border-top: 1px solid var(--borde); background: #f8fafc; text-align: center; font-size: 0.82rem; color: var(--gris); line-height: 1.5;">
+    <p style="margin: 0 0 10px 0;">
+      Estos mensajes se envían con la única intención de ofrecerte una pequeña herramienta gratuita para practicar un poco de italiano, sin ánimo de causar molestia. La decisión de seguir recibiéndolos queda siempre a tu entera consideración.
+    </p>
+    <button type="button" id="btn-baja-envios" style="background: #ffffff; border: 1px solid #cbd5e1; color: var(--gris); padding: 6px 14px; border-radius: 8px; font-size: 0.78rem; font-weight: 500; cursor: pointer;">
+      Dejar de recibir estos mensajes
+    </button>
+    <p id="msg-baja-confirmada" style="display: none; margin: 8px 0 0 0; color: var(--verde); font-weight: 600;">
+      Listo. Se ha registrado tu solicitud para no recibir más mensajes de ejercicios.
+    </p>
+  </footer>
 </div>
 
 <script>
@@ -789,6 +800,20 @@
     })
     .then(data => inicializarApp(data))
     .catch(() => inicializarApp(EJERCICIO_FALLBACK));
+
+  (function configurarBaja() {
+    const pie = document.getElementById("pie-baja");
+    const btnBaja = document.getElementById("btn-baja-envios");
+    const msgOk = document.getElementById("msg-baja-confirmada");
+    if (!alumnoId || alumnoId.toLowerCase() === "sin_id" || alumnoId.toUpperCase() === "PRUEBA") { if (pie) pie.style.display = "none"; return; }
+    if (btnBaja) {
+      btnBaja.addEventListener("click", () => {
+        if (!confirm("¿Confirmas que ya no deseas recibir mensajes con ejercicios de italiano?")) return;
+        registrarEvento({ evento: "baja_envios", nivel: "-", aciertos: "-", retrocesos: 0, errores: "Solicitud de baja desde la web" });
+        btnBaja.style.display = "none"; msgOk.style.display = "block";
+      });
+    }
+  })();
 </script>
 </body>
 </html>
