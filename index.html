@@ -82,8 +82,46 @@
       padding: 12px 14px;
       border-radius: 6px;
       font-size: 0.88rem;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
       color: #334155;
+    }
+
+    /* Barra de audio TTS nativo */
+    .barra-audio {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-audio {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      padding: 9px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .btn-audio:hover {
+      background: #dbeafe;
+    }
+
+    .btn-audio.detener {
+      background: #fef2f2;
+      color: #b91c1c;
+      border-color: #fecaca;
+    }
+
+    .btn-audio.detener:hover {
+      background: #fee2e2;
     }
 
     .caja-lectura {
@@ -103,19 +141,6 @@
 
     .caja-lectura p:last-child {
       margin-bottom: 0;
-    }
-
-    .caja-audio {
-      padding: 20px;
-      border: 1px solid var(--borde);
-      border-radius: 12px;
-      background: #f8fafc;
-      text-align: center;
-    }
-
-    audio {
-      width: 100%;
-      margin-top: 12px;
     }
 
     .indicador-scroll {
@@ -273,25 +298,26 @@
 
   <header>
     <h1 id="titulo-actividad">Sfida di Lettura Progressiva (A1 → C2)</h1>
-    <p id="subtitulo-actividad">Lee con atención hasta el final. Al pasar a las preguntas, el texto quedará oculto.</p>
+    <p id="subtitulo-actividad">Lee o escucha con atención hasta el final. Al pasar a las preguntas, el texto quedará oculto.</p>
   </header>
 
   <section id="pantalla-estimulo" class="pantalla activa">
     <div class="aviso-instruccion" id="instruccion-estimulo">
-      Desliza hasta el final del texto para habilitar el botón de preguntas. Si regresas durante el cuestionario, quedará registrado en tu resultado final.
+      Desliza hasta el final del texto (o escúchalo completo) para habilitar las preguntas. Si regresas durante el cuestionario, quedará registrado en tu resultado final.
+    </div>
+
+    <div class="barra-audio" id="barra-audio">
+      <button type="button" id="btn-audio-toggle" class="btn-audio">
+        🔊 Escuchar texto en italiano
+      </button>
+      <button type="button" id="btn-audio-stop" class="btn-audio detener" style="display: none;">
+        ⏹ Detener
+      </button>
     </div>
 
     <div id="contenedor-texto" class="caja-lectura">
       <div id="parrafos-lectura"><p>Caricamento esercizio...</p></div>
       <div id="marca-final" style="height: 4px;"></div>
-    </div>
-
-    <div id="contenedor-audio" class="caja-audio" style="display: none;">
-      <p><strong>Ascolta la storia con attenzione</strong></p>
-      <audio id="reproductor-audio" controls preload="metadata">
-        <source id="fuente-audio" src="" type="audio/mpeg" />
-        Tu navegador no soporta audio HTML5.
-      </audio>
     </div>
 
     <div class="indicador-scroll" id="estado-lectura">
@@ -305,7 +331,7 @@
 
   <section id="pantalla-preguntas" class="pantalla">
     <button id="btn-volver-estimulo" class="btn-volver">
-      ← Volver al texto para releer
+      ← Volver al texto para releer / escuchar
     </button>
 
     <form id="form-preguntas"></form>
@@ -333,8 +359,7 @@
 
   const EJERCICIO_FALLBACK = {
     actividad: "Reto 01 - Marco a Roma",
-    modo: "texto",
-    archivoAudio: "historia_01.mp3",
+    modo: "texto_y_audio",
     parrafos: [
       "Marco è un turista spagnolo a Roma. Oggi entra in un bar vicino al Colosseo perché ha molta fame e vuole fare colazione. Chiede un caffè e un cornetto al cioccolato. Il barista è gentile e prepara tutto velocemente.",
       "Mentre Marco mangiava, ha visto una signora elegante accanto a lui che leggeva il giornale. Quando ha finito, ha messo la mano in tasca per pagare, ma non ha trovato il portafoglio. Lo aveva dimenticato in albergo!",
@@ -397,12 +422,13 @@
   let CONFIG = null;
   let vecesRegreso = 0;
   let estimuloCompletado = false;
+  let usoAudio = false;
 
   function registrarEvento(datos) {
     if (!WEBHOOK_URL || !CONFIG) return;
     const payload = Object.assign({
       actividad: CONFIG.actividad,
-      modo: CONFIG.modo,
+      modo: usoAudio ? "audio" : (CONFIG.modo || "texto"),
       id: alumnoId,
       nombre: alumnoNombre
     }, datos);
@@ -413,6 +439,21 @@
       headers: { "Content-Type": "text/plain;charset=utf-8" },
       body: JSON.stringify(payload)
     }).catch(() => {});
+  }
+
+  function obtenerVozItaliana() {
+    const voces = window.speechSynthesis.getVoices();
+    return voces.find(v => v.lang === "it-IT") || voces.find(v => v.lang.toLowerCase().startsWith("it")) || null;
+  }
+
+  function detenerAudio() {
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.cancel();
+    }
+    const btnToggle = document.getElementById("btn-audio-toggle");
+    const btnStop = document.getElementById("btn-audio-stop");
+    if (btnToggle) btnToggle.textContent = "🔊 Escuchar texto en italiano";
+    if (btnStop) btnStop.style.display = "none";
   }
 
   function inicializarApp(data) {
@@ -435,8 +476,9 @@
     const btnVolverEstimulo = document.getElementById("btn-volver-estimulo");
     const estadoLectura = document.getElementById("estado-lectura");
     const cajaLectura = document.getElementById("contenedor-texto");
-    const cajaAudio = document.getElementById("contenedor-audio");
-    const reproductor = document.getElementById("reproductor-audio");
+    const barraAudio = document.getElementById("barra-audio");
+    const btnAudioToggle = document.getElementById("btn-audio-toggle");
+    const btnAudioStop = document.getElementById("btn-audio-stop");
 
     function habilitarContinuar() {
       if (!estimuloCompletado) {
@@ -448,29 +490,64 @@
       }
     }
 
-    if (CONFIG.modo === "audio") {
-      document.getElementById("titulo-actividad").textContent = "Sfida d'Ascolto Progressivo (A1 → C2)";
-      subtituloActividad.textContent = "Escucha el audio completo. Al pasar a las preguntas, el reproductor quedará oculto.";
-      document.getElementById("instruccion-estimulo").textContent = "Escucha el audio hasta el final para habilitar las preguntas. Si regresas a escucharlo de nuevo, quedará registrado en tu diagnóstico.";
-      btnVolverEstimulo.textContent = "← Volver a escuchar el audio";
-      cajaLectura.style.display = "none";
-      cajaAudio.style.display = "block";
-      document.getElementById("fuente-audio").src = CONFIG.archivoAudio;
-      reproductor.load();
-      estadoLectura.textContent = "▶ Escucha el audio completo para continuar";
-      reproductor.addEventListener("ended", habilitarContinuar);
-    } else {
-      const contenedorParrafos = document.getElementById("parrafos-lectura");
-      contenedorParrafos.innerHTML = (CONFIG.parrafos || []).map(p => `<p>${p}</p>`).join("");
+    const contenedorParrafos = document.getElementById("parrafos-lectura");
+    contenedorParrafos.innerHTML = (CONFIG.parrafos || []).map(p => `<p>${p}</p>`).join("");
 
-      const observador = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-          habilitarContinuar();
+    // Configurar síntesis de voz en italiano (TTS nativo sin archivos MP3)
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.getVoices();
+      window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+
+      btnAudioToggle.addEventListener("click", () => {
+        const synth = window.speechSynthesis;
+        if (synth.speaking && !synth.paused) {
+          synth.pause();
+          btnAudioToggle.textContent = "▶️ Reanudar audio";
+          return;
         }
-      }, { root: cajaLectura, threshold: 0.9 });
+        if (synth.paused) {
+          synth.resume();
+          btnAudioToggle.textContent = "⏸ Pausar audio";
+          return;
+        }
 
-      observador.observe(document.getElementById("marca-final"));
+        usoAudio = true;
+        synth.cancel();
+        const textoCompleto = (CONFIG.parrafos || []).join(" ");
+        const utterance = new SpeechSynthesisUtterance(textoCompleto);
+        utterance.lang = "it-IT";
+        utterance.rate = 0.95;
+        const vozIt = obtenerVozItaliana();
+        if (vozIt) utterance.voice = vozIt;
+
+        utterance.onstart = () => {
+          btnAudioToggle.textContent = "⏸ Pausar audio";
+          btnAudioStop.style.display = "inline-flex";
+        };
+        utterance.onend = () => {
+          detenerAudio();
+          habilitarContinuar();
+        };
+        utterance.onerror = () => {
+          detenerAudio();
+        };
+
+        synth.speak(utterance);
+      });
+
+      btnAudioStop.addEventListener("click", detenerAudio);
+      window.addEventListener("beforeunload", detenerAudio);
+    } else {
+      barraAudio.style.display = "none";
     }
+
+    const observador = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        habilitarContinuar();
+      }
+    }, { root: cajaLectura, threshold: 0.9 });
+
+    observador.observe(document.getElementById("marca-final"));
 
     const formPreguntas = document.getElementById("form-preguntas");
     CONFIG.preguntas.forEach((item, idx) => {
@@ -487,7 +564,7 @@
     });
 
     btnIrPreguntas.addEventListener("click", () => {
-      if (CONFIG.modo === "audio") reproductor.pause();
+      detenerAudio();
       subtituloActividad.style.display = "none";
       pEstimulo.classList.remove("activa");
       pPreguntas.classList.add("activa");
@@ -545,7 +622,7 @@
       document.getElementById("resumen-aciertos").textContent = `Acertaste ${aciertos} de ${CONFIG.preguntas.length} niveles.`;
 
       const badgeRetroceso = document.getElementById("badge-retroceso");
-      const accionTexto = CONFIG.modo === "audio" ? "volver a escuchar el audio" : "regresar a releer el texto";
+      const accionTexto = usoAudio ? "volver a escuchar el audio" : "regresar a releer el texto";
 
       if (vecesRegreso === 0) {
         badgeRetroceso.className = "registro-retroceso sin-retroceso";
