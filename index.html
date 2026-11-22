@@ -86,7 +86,26 @@
       color: #334155;
     }
 
-    /* Barra de audio TTS nativo */
+    .caja-video {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      margin-bottom: 14px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--borde);
+      background: #000;
+    }
+
+    .caja-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
     .barra-audio {
       display: flex;
       align-items: center;
@@ -306,6 +325,10 @@
       Desliza hasta el final del texto (o escúchalo completo) para habilitar las preguntas. Si regresas durante el cuestionario, quedará registrado en tu resultado final.
     </div>
 
+    <div id="contenedor-youtube" class="caja-video" style="display: none;">
+      <iframe id="iframe-youtube" src="" title="Canzone italiana" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
     <div class="barra-audio" id="barra-audio">
       <button type="button" id="btn-audio-toggle" class="btn-audio">
         🔊 Escuchar texto en italiano
@@ -428,7 +451,7 @@
     if (!WEBHOOK_URL || !CONFIG) return;
     const payload = Object.assign({
       actividad: CONFIG.actividad,
-      modo: usoAudio ? "audio" : (CONFIG.modo || "texto"),
+      modo: CONFIG.youtubeId ? "cancion" : (usoAudio ? "audio" : (CONFIG.modo || "texto")),
       id: alumnoId,
       nombre: alumnoNombre
     }, datos);
@@ -490,10 +513,21 @@
       }
     }
 
+    if (CONFIG.titulo) {
+      document.getElementById("titulo-actividad").textContent = CONFIG.titulo;
+    }
+
+    if (CONFIG.youtubeId) {
+      const boxYt = document.getElementById("contenedor-youtube");
+      const iframeYt = document.getElementById("iframe-youtube");
+      iframeYt.src = `https://www.youtube.com/embed/${encodeURIComponent(CONFIG.youtubeId)}?rel=0`;
+      boxYt.style.display = "block";
+      btnAudioToggle.textContent = "🔊 Escuchar letra recitada";
+    }
+
     const contenedorParrafos = document.getElementById("parrafos-lectura");
     contenedorParrafos.innerHTML = (CONFIG.parrafos || []).map(p => `<p>${p}</p>`).join("");
 
-    // Configurar síntesis de voz en italiano (TTS nativo sin archivos MP3)
     if ("speechSynthesis" in window) {
       window.speechSynthesis.getVoices();
       window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
@@ -622,7 +656,7 @@
       document.getElementById("resumen-aciertos").textContent = `Acertaste ${aciertos} de ${CONFIG.preguntas.length} niveles.`;
 
       const badgeRetroceso = document.getElementById("badge-retroceso");
-      const accionTexto = usoAudio ? "volver a escuchar el audio" : "regresar a releer el texto";
+      const accionTexto = CONFIG.youtubeId ? "volver a escuchar la canción / leer la letra" : (usoAudio ? "volver a escuchar el audio" : "regresar a releer el texto");
 
       if (vecesRegreso === 0) {
         badgeRetroceso.className = "registro-retroceso sin-retroceso";
