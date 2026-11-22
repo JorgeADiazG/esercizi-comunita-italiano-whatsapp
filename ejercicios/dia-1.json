@@ -1,0 +1,80 @@
+{
+  "actividad": "Reto 01 - Marco a Roma",
+  "modo": "texto_y_audio",
+  "parrafos": [
+    "Marco è un turista spagnolo a Roma. Oggi entra in un bar vicino al Colosseo perché ha molta fame e vuole fare colazione. Chiede un caffè e un cornetto al cioccolato. Il barista è gentile e prepara tutto velocemente.",
+    "Mentre Marco mangiava, ha visto una signora elegante accanto a lui che leggeva il giornale. Quando ha finito, ha messo la mano in tasca per pagare, ma non ha trovato il portafoglio. Lo aveva dimenticato in albergo!",
+    "Marco si è sentito molto imbarazzato e ha pensato: \"Se non pago subito, il barista chiamerà la polizia\". Così, gli ha spiegato la situazione e gli ha chiesto se poteva lasciare il suo orologio come garanzia finché non fosse tornato con i soldi.",
+    "Il barista, invece di arrabbiarsi, si è messo a ridere di gusto. Gli ha detto che non c'era bisogno che lasciasse nulla, purché tornasse prima della chiusura. Marco ha tirato un sospiro di sollievo, rendendosi conto di essersi fasciato la testa prima di rompersela.",
+    "Avendo recuperato il denaro in albergo, Marco si affrettò a tornare al locale per saldare il conto, desideroso di sdebitarsi per la squisita cortesia ricevuta. Tuttavia, giunto sul posto, apprese con stupore che la signora del giornale aveva già provveduto a estinguere il suo debito, lasciandogli persino un biglietto di benvenuto.",
+    "Quell'episodio fortuito, lungi dall'esaurirsi in un mero atto di magnanimità estemporanea, finì per scardinare ogni pregiudizio che Marco nutrisse nei confronti della diffidenza metropolitana, inducendolo a riflettere su quanto l'altrui benevolenza sappia talvolta disinnescare le più paranoiche congetture."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Cosa ordina Marco al bar?",
+      "opciones": [
+        "Un tè e un panino.",
+        "Un caffè e un cornetto.",
+        "Solo un bicchiere d'acqua."
+      ],
+      "correcta": 1,
+      "explicacion": "En el primer párrafo (A1): 'Chiede un caffè e un cornetto al cioccolato'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Dov'era il portafoglio di Marco?",
+      "opciones": [
+        "Nella tasca della signora.",
+        "Sul tavolo del bar.",
+        "In albergo."
+      ],
+      "correcta": 2,
+      "explicacion": "Uso de trapassato prossimo (A2): 'Lo aveva dimenticato in albergo!'."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Cosa propone Marco al barista per risolvere il problema?",
+      "opciones": [
+        "Di lasciare il suo orologio finché non torna con i soldi.",
+        "Di chiamare la polizia insieme.",
+        "Di lavare i piatti del bar."
+      ],
+      "correcta": 0,
+      "explicacion": "Oración subordinada con congiuntivo trapassato (B1): 'lasciare il suo orologio come garanzia finché non fosse tornato con i soldi'."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Cosa significa che Marco 'si era fasciato la testa prima di rompersela'?",
+      "opciones": [
+        "Che si era fatto male mentre correva.",
+        "Che si era preoccupato troppo in anticipo senza motivo.",
+        "Che il barista gli aveva dato un colpo."
+      ],
+      "correcta": 1,
+      "explicacion": "Modismo idiomático (B2): 'fasciarsi la testa prima di rompersela' equivale a preocuparse antes de tiempo."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Chi ha pagato alla fine la colazione di Marco?",
+      "opciones": [
+        "Nessuno, il barista gliel'ha offerta.",
+        "La signora che leggeva il giornale.",
+        "Marco stesso quando è tornato."
+      ],
+      "correcta": 1,
+      "explicacion": "Léxico formal (C1): 'la signora del giornale aveva già provveduto a estinguere il suo debito'."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Qual è stata la conseguenza profonda di questo episodio per Marco?",
+      "opciones": [
+        "Ha deciso di non portare mai più contanti con sé.",
+        "Ha cambiato idea sulla presunta diffidenza delle grandi città.",
+        "Ha capito che i gesti generosi sono sempre interessati."
+      ],
+      "correcta": 1,
+      "explicacion": "Registro literario (C2): 'scardinare ogni pregiudizio che Marco nutrisse nei confronti della diffidenza metropolitana'."
+    }
+  ]
+}
