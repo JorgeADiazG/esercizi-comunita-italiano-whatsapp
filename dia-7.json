@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 07 - Venerdì sera: andiamo all'aperitivo!",
+  "titulo": "Sfida Quotidiana: Venerdì sera: l'aperitivo italiano (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "È venerdì sera! La settimana di lavoro è finita e molte persone escono con gli amici per fare l'aperitivo verso le sette di sera.",
+    "Al bar si ordina una bevanda, come uno spritz, un analcolico alla frutta o un bicchiere di vino, accompagnata da patatine, olive, focaccia e piccoli stuzzichini.",
+    "In italiano, con il verbo 'piacere', si usa 'mi piace' davanti a un nome singolare o a un verbo (mi piace lo spritz), e 'mi piacciono' davanti a un nome plurale (mi piacciono le olive).",
+    "Nata soprattutto nel Nord Italia, l'usanza dell'aperitivo è diventata negli ultimi decenni un vero fenomeno nazionale che segna simbolicamente l'inizio del weekend.",
+    "Spesso l'aperitivo si trasforma in 'apericena', una formula abbondante che consente di cenare informale assaggiando diverse specialità gastronomiche a buffet.",
+    "Più che una semplice pratica enogastronomica, l'aperitivo incarna l'arte italiana della decompressione collettiva, dove il tempo rallenta e la conversazione prevale sulla fretta."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. A che ora escono molte persone il venerdì per fare l'aperitivo?",
+      "opciones": [
+        "Verso le sette di sera.",
+        "Alle sei di mattina.",
+        "A mezzogiorno."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1): 'escono con gli amici per fare l'aperitivo verso le sette di sera'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Quale forma del verbo 'piacere' è corretta con il plurale 'le olive'?",
+      "opciones": [
+        "Mi piace le olive.",
+        "Mi piacciono le olive.",
+        "Io piaccio le olive."
+      ],
+      "correcta": 1,
+      "explicacion": "Concordancia gramatical (A2): con sustantivos en plural se usa 'mi piacciono'."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Che cosa accompagna di solito la bevanda durante l'aperitivo?",
+      "opciones": [
+        "Patatine, olive, focaccia e piccoli stuzzichini.",
+        "Solo una tazza di latte freddo.",
+        "Una zuppa bollente."
+      ],
+      "correcta": 0,
+      "explicacion": "Vocabulario (B1): 'patatine, olive, focaccia e piccoli stuzzichini'."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Che cos'è un'apericena?",
+      "opciones": [
+        "Un aperitivo abbondante che sostituisce una cena informale.",
+        "Una colazione servita a mezzanotte.",
+        "Un ristorante dove si mangia in silenzio."
+      ],
+      "correcta": 0,
+      "explicacion": "Neologismo cultural (B2): fusión de 'aperitivo' + 'cena'."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Dove ha avuto origine principalmente la tradizione dell'aperitivo moderno?",
+      "opciones": [
+        "Soprattutto nel Nord Italia, prima di diffondersi in tutto il paese.",
+        "Esclusivamente sulle isole minori.",
+        "Nelle stazioni ferroviarie di montagna."
+      ],
+      "correcta": 0,
+      "explicacion": "Dato histórico-cultural (C1) del cuarto párrafo."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Che cosa incarna l'aperitivo secondo la riflessione finale del brano?",
+      "opciones": [
+        "L'arte italiana della decompressione collettiva, in cui la conversazione prevale sulla fretta.",
+        "Un obbligo commerciale per aumentare i consumi.",
+        "Una cerimonia formale riservata agli affari."
+      ],
+      "correcta": 0,
+      "explicacion": "Registro culto (C2): 'incarna l'arte italiana della decompressione collettiva'."
+    }
+  ]
+}

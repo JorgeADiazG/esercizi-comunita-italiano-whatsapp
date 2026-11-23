@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 38 - L'ultimo lunedì dell'anno",
+  "titulo": "Sfida Quotidiana: L'ultimo lunedì dell'anno (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "Oggi è lunedì 28 dicembre, l'ultimo lunedì del 2026! In Messico e in Spagna oggi è il 'Día de los Inocentes' e si fanno scherzi simpatici.",
+    "In Italia, invece, la giornata degli scherzi non è il 28 dicembre, ma il primo aprile (il celebre 'Pesce d'aprile'!).",
+    "Per esprimere sorpresa o incredulità in italiano si usano espressioni vivaci come 'Ma davvero?!', 'Non ci credo!', 'Stai scherzando!' oppure 'Ma dai!'.",
+    "Questo ultimo lunedì dell'anno ha un sapore leggero: chi è in ferie si gode gli ultimi giorni di relax, e chi lavora conta le ore fino al cenone di San Silvestro.",
+    "Il confronto tra tradizioni giocose come il 'Día de los Inocentes' e il 'Pesce d'aprile' mostra come culture diverse ritualizzino l'umorismo in date differenti.",
+    "L'ironia ludica codificata nel calendario svolge una funzione catartica, permettendo alla collettività di sovvertire temporaneamente le regole della credulità."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Che giorno della settimana è oggi, 28 dicembre?",
+      "opciones": [
+        "Lunedì, l'ultimo lunedì dell'anno.",
+        "Venerdì.",
+        "Domenica."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1)."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Quando si fanno gli scherzi tradizionali in Italia?",
+      "opciones": [
+        "Il primo aprile ('Pesce d'aprile').",
+        "Il 25 dicembre.",
+        "Il 15 agosto."
+      ],
+      "correcta": 0,
+      "explicacion": "Cultura básica (A2): en Italia el día de las bromas es el 1 de abril."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Quale espressione si usa in italiano per reagire con incredulità a uno scherzo?",
+      "opciones": [
+        "Stai scherzando! / Non ci credo!",
+        "Buon appetito!",
+        "Prego, si accomodi!"
+      ],
+      "correcta": 0,
+      "explicacion": "Expresiones comunicativas (B1) del tercer párrafo."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Che cosa significa l'espressione 'essere in ferie' nel quarto paragrafo?",
+      "opciones": [
+        "Essere in vacanza dal lavoro.",
+        "Essere malati in ospedale.",
+        "Lavorare di notte."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico laboral cotidiano (B2): 'le ferie' = vacaciones laborales."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Che cosa dimostra il confronto tra il 'Día de los Inocentes' e il 'Pesce d'aprile'?",
+      "opciones": [
+        "Come culture diverse ritualizzino l'umorismo in date differenti.",
+        "Che in Italia non esistono mai scherzi.",
+        "Che il calendario italiano ha tredici mesi."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión intercultural (C1) del quinto párrafo."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Quale funzione svolge l'ironia ludica codificata nel calendario según la conclusione?",
+      "opciones": [
+        "Una funzione catartica che sovverte temporaneamente le regole della credulità.",
+        "Una funzione fiscale di controllo amministrativo.",
+        "Un divieto assoluto di comunicazione."
+      ],
+      "correcta": 0,
+      "explicacion": "Registro antropológico/ensayístico (C2) del sexto párrafo."
+    }
+  ]
+}

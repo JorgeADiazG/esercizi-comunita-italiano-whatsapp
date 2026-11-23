@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 41 - Buon Anno! Addio 2026, benvenuto 2027!",
+  "titulo": "Sfida Quotidiana: Buon Anno! Addio 2026, benvenuto 2027! (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "Oggi è giovedì 31 dicembre, la notte di San Silvestro! Stasera salutiamo il 2026 e diamo il benvenuto al 2027 con gioia e speranza.",
+    "A mezzanotte si stappa lo spumante, si guardano i fuochi d'artificio e si brinda insieme dicendo: 'Buon Anno!', 'Felice 2027!' e 'Cin cin!'.",
+    "Per i buoni propositi del nuovo anno si usa il futuro semplice: 'Nel 2027 parlerò ancora meglio l'italiano', 'Viaggerò di più', 'Leggerò tanti libri'.",
+    "In molte piazze italiane si organizzano concerti gratuiti all'aperto dove migliaia di persone ballano e cantano insieme fino all'alba del primo gennaio.",
+    "Il passaggio simbolico tra un anno e l'altro rinnova il desiderio umano di ricominciare, trasformando ogni proposito in un impegno verso se stessi.",
+    "Nella liturgia laica del Capodanno, il brindisi collettivo di mezzanotte sancisce la rigenerazione del tempo civile e inaugura un nuovo orizzonte di possibilità."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Come si chiama il 31 dicembre nel calendario italiano?",
+      "opciones": [
+        "La notte di San Silvestro.",
+        "Il giorno di Ferragosto.",
+        "La domenica delle Palme."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1): 'Oggi è giovedì 31 dicembre, la notte di San Silvestro!'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Che cosa si dice in italiano quando si brinda con i bicchieri a mezzanotte?",
+      "opciones": [
+        "Cin cin! Buon Anno!",
+        "Buonanotte e sogni d'oro!",
+        "Scusi, dov'è la banca?"
+      ],
+      "correcta": 0,
+      "explicacion": "Brindis típico italiano (A2) del segundo párrafo."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Quale frase esprime un buon proposito al futuro per il 2027?",
+      "opciones": [
+        "Nel 2027 parlerò ancora meglio l'italiano.",
+        "Nel 2027 parlavo italiano.",
+        "Nel 2027 ho parlato italiano."
+      ],
+      "correcta": 0,
+      "explicacion": "Futuro simple para propósitos (B1) del tercer párrafo."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Che cosa si organizza in molte piazze italiane la notte del 31 dicembre?",
+      "opciones": [
+        "Concerti gratuiti all'aperto fino all'alba.",
+        "Esami scritti di storia.",
+        "Mercati silenziosi all'alba."
+      ],
+      "correcta": 0,
+      "explicacion": "Cultura contemporánea (B2) del cuarto párrafo."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Che cosa rinnova il passaggio simbolico tra un anno e l'altro?",
+      "opciones": [
+        "Il desiderio umano di ricominciare e l'impegno verso se stessi.",
+        "La nostalgia immobile del secolo scorso.",
+        "La chiusura definitiva di ogni progetto."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico reflexivo (C1) del quinto párrafo."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Che cosa sancisce il brindisi collettivo di mezzanotte nella conclusione?",
+      "opciones": [
+        "La rigenerazione del tempo civile e l'apertura di un nuovo orizzonte di possibilità.",
+        "La sospensione permanente del calendario solare.",
+        "Una formalità amministrativa riservata alle autorità."
+      ],
+      "correcta": 0,
+      "explicacion": "Registro culto/ensayístico (C2) del sexto párrafo."
+    }
+  ]
+}

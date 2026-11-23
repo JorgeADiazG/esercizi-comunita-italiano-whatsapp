@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 03 - Nuovo trimestre e il caffè del lunedì!",
+  "titulo": "Sfida Quotidiana: Il caffè del lunedì mattina (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "Oggi è lunedì 23 novembre e inizia un nuovo trimestre di lezioni. Prima di andare a lavorare o a studiare, molti italiani entrano al bar per bere un caffè espresso al banco.",
+    "Il lunedì mattina, quando la sveglia suona presto dopo il fine settimana, un buon cappuccino caldo e un cornetto appena sfornato aiutano a trovare l'energia per ricominciare.",
+    "In Italia il rito del bar è rapidissimo: si paga alla cassa, si consegna lo scontrino al barista e si beve il caffè in piedi in pochi minuti, scambiando due chiacchiere sull'inizio della settimana.",
+    "A differenza di altri paesi dove si cammina per strada con grandi bicchieri di carta, la cultura italiana privilegia la tazzina di ceramica bollente e una pausa breve ma intensa.",
+    "Che si tratti di affrontare il temuto rientro settimanale o di inaugurare un nuovo percorso accademico, la caffetteria resta uno spazio democratico di socializzazione quotidiana.",
+    "Lungi dall'essere una semplice assunzione di caffeina, l'espresso mattutino costituisce in Italia un micro-rituale antropologico che scandisce il passaggio dal tempo privato del riposo alla sfera pubblica del lavoro."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Dove vanno molti italiani la mattina prima di lavorare o studiare?",
+      "opciones": [
+        "Al supermercato.",
+        "Al bar per bere un caffè.",
+        "In biblioteca."
+      ],
+      "correcta": 1,
+      "explicacion": "En el primer párrafo (A1): 'molti italiani entrano al bar per bere un caffè espresso al banco'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Che cosa mangiano spesso con il cappuccino la mattina?",
+      "opciones": [
+        "Un cornetto appena sfornato.",
+        "Un piatto di spaghetti.",
+        "Una pizza margherita."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico cotidiano de desayuno (A2): 'un buon cappuccino caldo e un cornetto appena sfornato'."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Come si consuma di solito il caffè nel rito tradizionale del bar italiano?",
+      "opciones": [
+        "Seduti per due ore con il computer.",
+        "In piedi al banco, in pochi minuti, dopo aver pagato alla cassa.",
+        "Solo ordinandolo a domicilio."
+      ],
+      "correcta": 1,
+      "explicacion": "Comprensión cultural (B1): 'si paga alla cassa, si consegna lo scontrino al barista e si beve il caffè in piedi in pochi minuti'."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Che cosa significa l'espressione 'scambiare due chiacchiere'?",
+      "opciones": [
+        "Litigare ad alta voce con il barista.",
+        "Conversare brevemente in modo informale e amichevole.",
+        "Cambiare monete alla cassa."
+      ],
+      "correcta": 1,
+      "explicacion": "Modismo frecuente (B2): 'scambiare due chiacchiere' equivale a charlar un rato de manera informal."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Perché il testo definisce la caffetteria italiana 'uno spazio democratico di socializzazione'?",
+      "opciones": [
+        "Perché il caffè è gratuito ogni lunedì.",
+        "Perché persone di ogni estrazione condividono lo stesso rituale quotidiano al banco.",
+        "Perché vi si tengono solo riunioni politiche."
+      ],
+      "correcta": 1,
+      "explicacion": "Léxico abstracto (C1): alude a un espacio cotidiano compartido por todos sin distinción."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Quale funzione svolge l'espresso mattutino secondo l'analisi conclusiva del testo?",
+      "opciones": [
+        "Sostituisce completamente il pranzo lavorativo.",
+        "Scandisce simbolicamente la transizione dal riposo privato all'attività pubblica.",
+        "Serve esclusivamente a evitare il traffico cittadino."
+      ],
+      "correcta": 1,
+      "explicacion": "Registro ensayístico (C2): 'scandisce il passaggio dal tempo privato del riposo alla sfera pubblica del lavoro'."
+    }
+  ]
+}

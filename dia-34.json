@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 34 - Buona Vigilia di Natale!",
+  "titulo": "Sfida Quotidiana: Buona Vigilia di Natale! (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "Oggi è giovedì 24 dicembre, la Vigilia di Natale! Stasera le famiglie si riuniscono per cenare insieme e aspettare la mezzanotte.",
+    "In italiano si dice 'Buona Vigilia!', 'Buon Natale!' e 'Tanti auguri a te e alla tua famiglia!'. Sono frasi piene di calore e affetto.",
+    "In molte regioni del Centro e del Sud Italia il cenone della Vigilia è il momento più importante delle feste, seguito dalla Messa di Mezzanotte e dallo scambio dei regali.",
+    "Anche tra Messico e Italia, pur con piatti diversi sulla tavola, la notte del 24 dicembre condivide lo stesso spirito di unione, gratitudine e speranza.",
+    "La sera della Vigilia sospende le preoccupazioni quotidiane e restituisce centralità agli affetti più autentici, al dialogo lento e alla memoria familiare.",
+    "Nella simbologia natalizia, la veglia notturna del 24 dicembre incarna l'attesa comunitaria del rinnovamento, trasformando la casa in santuario domestico."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Che cosa si celebra oggi, 24 dicembre?",
+      "opciones": [
+        "La Vigilia di Natale.",
+        "Capodanno.",
+        "Ferragosto."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1): 'Oggi è giovedì 24 dicembre, la Vigilia di Natale!'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Qual è la formula corretta per fare gli auguri natalizi in italiano?",
+      "opciones": [
+        "Buon Natale e tanti auguri!",
+        "Buon compleanno di Pasqua!",
+        "Buona fortuna per l'esame!"
+      ],
+      "correcta": 0,
+      "explicacion": "Fórmulas sociales básicas (A2) del segundo párrafo."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Dove il cenone della Vigilia è particolarmente centrale in Italia?",
+      "opciones": [
+        "In molte regioni del Centro e del Sud Italia.",
+        "Solo sulle cime delle Alpi.",
+        "Unicamente negli aeroporti."
+      ],
+      "correcta": 0,
+      "explicacion": "Geografía cultural (B1) del tercer párrafo."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Che cosa accomuna Messico e Italia la notte del 24 dicembre?",
+      "opciones": [
+        "Lo stesso spirito di unione, gratitudine e speranza.",
+        "Gli stessi identici piatti regionali.",
+        "Il clima tropicale."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión intercultural (B2) del cuarto párrafo."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. A che cosa restituisce centralità la sera della Vigilia?",
+      "opciones": [
+        "Agli affetti più autentici, al dialogo lento e alla memoria familiare.",
+        "Alle scadenze lavorative del trimestre.",
+        "Alla velocità dei trasporti urbani."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico afectivo/reflexivo (C1) del quinto párrafo."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Come viene interpretata la veglia notturna del 24 dicembre nella conclusione?",
+      "opciones": [
+        "Incarna l'attesa comunitaria del rinnovamento e trasforma la casa in santuario domestico.",
+        "Costituisce una semplice pausa amministrativa.",
+        "Segna la fine delle tradizioni familiari."
+      ],
+      "correcta": 0,
+      "explicacion": "Registro culto/simbólico (C2) del sexto párrafo."
+    }
+  ]
+}

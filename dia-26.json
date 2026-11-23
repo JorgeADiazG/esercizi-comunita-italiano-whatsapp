@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 26 - Panettone o Pandoro? Il grande dilemma",
+  "titulo": "Sfida Quotidiana: Panettone o Pandoro? Il grande dilemma (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "È mercoledì! A metà settimana gli italiani discutono sempre di un tema importantissimo a dicembre: è più buono il panettone o il pandoro?",
+    "Il panettone nasce a Milano e ha uvetta e canditi; il pandoro nasce a Verona, ha la forma di una stella e si serve con lo zucchero a velo sopra.",
+    "Per esprimere la propria opinione in italiano si usano espressioni come 'Secondo me...', 'A mio parere...', 'Io preferisco...' oppure 'Penso che sia più soffice'.",
+    "Ogni famiglia italiana si divide tra i sostenitori del panettone tradizionale e i fedelissimi del pandoro, dando vita a dibattiti simpatici durante tutte le feste.",
+    "Oltre alle varianti classiche, oggi le pasticcerie artigianali propongono versioni farcite con crema al pistacchio, cioccolato fondente o zabaione.",
+    "La rivalità gastronomica tra panettone e pandoro costituisce un innocuo rituale identitario che trasforma la tavola natalizia in uno spazio ludico di appartenenza culturale."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Quali sono i due dolci natalizi protagonisti del dibattito in Italia?",
+      "opciones": [
+        "Il panettone e il pandoro.",
+        "Il gelato e la granita.",
+        "La pizza e la focaccia."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1): 'è più buono il panettone o il pandoro?'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Che cosa ha dentro il panettone tradizionale di Milano?",
+      "opciones": [
+        "Uvetta e canditi.",
+        "Prosciutto e formaggio.",
+        "Fragole e panna montata."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico gastronómico (A2): 'Il panettone nasce a Milano e ha uvetta e canditi'."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Come si serve tradizionalmente il pandoro di Verona?",
+      "opciones": [
+        "Con lo zucchero a velo sopra.",
+        "Con salsa di pomodoro.",
+        "Con aceto balsamico."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión cultural (B1) del segundo párrafo."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Quale espressione introduce un'opinione personale in italiano?",
+      "opciones": [
+        "Secondo me... / A mio parere...",
+        "C'era una volta...",
+        "Vietato l'ingresso..."
+      ],
+      "correcta": 0,
+      "explicacion": "Marcadores discursivos de opinión (B2) del tercer párrafo."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Quali varianti moderne propongono oggi le pasticcerie artigianali?",
+      "opciones": [
+        "Versioni farcite con crema al pistacchio, cioccolato fondente o zabaione.",
+        "Solo varianti salate con verdure.",
+        "Versioni prive di qualsiasi lievitazione."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico gastronómico avanzado (C1) del quinto párrafo."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Come viene interpretata la rivalità tra panettone e pandoro nella conclusione?",
+      "opciones": [
+        "Un innocuo rituale identitario che rende la tavola uno spazio ludico di appartenenza.",
+        "Un conflitto economico insanabile tra Nord e Sud.",
+        "Una strategia pubblicitaria nata nell'ultimo decennio."
+      ],
+      "correcta": 0,
+      "explicacion": "Registro ensayístico (C2) del sexto párrafo."
+    }
+  ]
+}

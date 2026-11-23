@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 40 - Tiriamo le somme del 2026",
+  "titulo": "Sfida Quotidiana: Tiriamo le somme del 2026 (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "Oggi è mercoledì 30 dicembre, l'ultimo mercoledì del 2026! È il giorno perfetto per guardare indietro e pensare a tutto quello che abbiamo imparato quest'anno.",
+    "Per fare un bilancio dell'anno usiamo il passato prossimo: 'Ho imparato molte parole nuove', 'Ho conosciuto persone simpatiche', 'Ho fatto tanti progressi'.",
+    "In italiano l'espressione idiomatica 'tirare le somme' significa proprio fare il bilancio finale di un'esperienza, valutando i risultati ottenuti.",
+    "Ogni piccolo esercizio quotidiano svolto durante l'anno ha costruito mattoncino dopo mattoncino una competenza comunicativa sempre più solida.",
+    "La pratica riflessiva di fine anno consente di riconoscere i traguardi raggiunti e di trasformare eventuali difficoltà in consapevolezza metodologica.",
+    "Nell'apprendimento permanente, l'autovalutazione retrospettiva costituisce il fulcro metacognitivo che orienta l'evoluzione futura del parlante."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Che giorno è oggi, 30 dicembre?",
+      "opciones": [
+        "L'ultimo mercoledì del 2026.",
+        "Il primo lunedì di gennaio.",
+        "La domenica di Pasqua."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1)."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Quale frase esprime un progresso fatto durante l'anno?",
+      "opciones": [
+        "Ho imparato molte parole nuove.",
+        "Non ho mai aperto un libro.",
+        "Dormirò tutto il giorno."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión básica (A2) del segundo párrafo."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Che cosa significa l'espressione 'tirare le somme'?",
+      "opciones": [
+        "Fare il bilancio finale valutando i risultati ottenuti.",
+        "Cancellare tutti i numeri dal quaderno.",
+        "Andare a nuotare in piscina."
+      ],
+      "correcta": 0,
+      "explicacion": "Modismo frecuente (B1) explicado en el tercer párrafo."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Come si costruisce una competenza linguistica solida secondo il quarto paragrafo?",
+      "opciones": [
+        "Mattoncino dopo mattoncino, con piccoli esercizi quotidiani.",
+        "Studiando dieci ore soltanto l'ultimo giorno dell'anno.",
+        "Senza mai ascoltare né leggere nulla."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión metafórica (B2)."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Che cosa permette la pratica riflessiva di fine anno?",
+      "opciones": [
+        "Riconoscere i traguardi raggiunti e trasformare le difficoltà in consapevolezza.",
+        "Ignorare ogni errore commesso.",
+        "Abbandonare definitivamente lo studio."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico pedagógico (C1) del quinto párrafo."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Quale ruolo svolge l'autovalutazione retrospettiva nell'apprendimento permanente?",
+      "opciones": [
+        "Costituisce il fulcro metacognitivo che orienta l'evoluzione futura del parlante.",
+        "Rappresenta una mera formalità statistica.",
+        "Limita la spontaneità espressiva."
+      ],
+      "correcta": 0,
+      "explicacion": "Terminología metacognitiva (C2) del sexto párrafo."
+    }
+  ]
+}
