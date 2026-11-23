@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 04 - La giornata tra lavoro e lezioni",
+  "titulo": "Sfida Quotidiana: La giornata tra lavoro e lezioni (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "Martedì è un giorno normale di lavoro e di studio. La mattina le persone si svegliano, fanno colazione e escono di casa per andare in ufficio, in fabbrica o a scuola.",
+    "In Italia gli uffici e i negozi chiudono spesso tra l'una e le tre del pomeriggio per la pausa pranzo, e poi riaprono fino alle sette o alle sette e mezza di sera.",
+    "Chi segue un corso di lingue dopo il lavoro deve organizzare bene la propria agenda per conciliare gli impegni professionali, la famiglia e lo studio quotidiano.",
+    "Sebbene nelle grandi città del Nord gli orari continuati siano ormai diffusi, in molte località di provincia resiste ancora la scansione tradizionale della giornata lavorativa.",
+    "Riuscire a ritagliarsi anche solo un quarto d'ora al giorno per esercitarsi in una lingua straniera si rivela molto più efficace di uno studio saltuario e frettoloso.",
+    "La costanza micro-quotidiana nell'apprendimento linguistico attiva infatti processi di consolidamento mnestico che trasformano lo sforzo iniziale in automatismo comunicativo."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Che cosa fanno le persone la mattina prima di uscire di casa?",
+      "opciones": [
+        "Fanno colazione.",
+        "Vanno a dormire.",
+        "Cenano al ristorante."
+      ],
+      "correcta": 0,
+      "explicacion": "Vocabulario básico de rutina (A1): 'si svegliano, fanno colazione e escono di casa'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Quando chiudono spesso i negozi in Italia per la pausa pranzo?",
+      "opciones": [
+        "Tra le otto e le dieci di mattina.",
+        "Tra l'una e le tre del pomeriggio.",
+        "A mezzanotte."
+      ],
+      "correcta": 1,
+      "explicacion": "Expresiones de hora (A2): 'chiudono spesso tra l'una e le tre del pomeriggio'."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Che cosa deve fare chi studia una lingua dopo il lavoro?",
+      "opciones": [
+        "Organizzare bene la propria agenda tra lavoro, famiglia e studio.",
+        "Smettere di lavorare per sei mesi.",
+        "Studiare solo una volta all'anno."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión general (B1): 'organizzare bene la propria agenda per conciliare gli impegni professionali, la famiglia e lo studio'."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Che cosa significa 'ritagliarsi un quarto d'ora'?",
+      "opciones": [
+        "Tagliare un orologio con le forbici.",
+        "Trovare un piccolo spazio di tempo libero in una giornata piena di impegni.",
+        "Arrivare sempre con quindici minuti di ritardo."
+      ],
+      "correcta": 1,
+      "explicacion": "Modismo idiomático (B2): 'ritagliarsi del tempo' significa hacerse un hueco de tiempo libre."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Quale confronto emerge tra le grandi città del Nord e la provincia italiana?",
+      "opciones": [
+        "Nelle grandi città è diffuso l'orario continuato, mentre in provincia resiste la pausa tradizionale.",
+        "In provincia i negozi non chiudono mai.",
+        "Al Nord nessuno lavora di pomeriggio."
+      ],
+      "correcta": 0,
+      "explicacion": "Matiz sociolinguístico y cultural (C1) del cuarto párrafo."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Qual è l'effetto della 'costanza micro-quotidiana' secondo l'ultimo paragrafo?",
+      "opciones": [
+        "Rallenta la memorizzazione del lessico.",
+        "Consolida la memoria e trasforma lo sforzo iniziale in automatismo comunicativo.",
+        "Impedisce la riflessione grammaticale."
+      ],
+      "correcta": 1,
+      "explicacion": "Léxico técnico/académico (C2): 'processi di consolidamento mnestico che trasformano lo sforzo iniziale in automatismo comunicativo'."
+    }
+  ]
+}

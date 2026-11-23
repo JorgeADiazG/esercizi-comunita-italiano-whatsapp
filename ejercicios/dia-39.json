@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 39 - Portafortuna per l'anno nuovo",
+  "titulo": "Sfida Quotidiana: Portafortuna per l'anno nuovo (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "Mancano solo due giorni alla fine dell'anno! In Italia ci sono molte tradizioni e portafortuna per attirare soldi, amore e salute nel nuovo anno.",
+    "La notte del 31 dicembre si mangiano le lenticchie con il cotechino o lo zampone, perché la loro forma rotonda ricorda le monete e porta prosperità.",
+    "Un'altra usanza famosissima è indossare qualcosa di rosso a Capodanno, mentre in alcune città del Sud si buttano simbolicamente le cose vecchie.",
+    "Per esprimere desideri e auguri di buona fortuna si dice: 'In bocca al lupo!', 'Che il nuovo anno ti porti tanta felicità!' e 'Buona fortuna!'.",
+    "Pur essendo vissute con ironia e leggerezza, le superstizioni di fine anno rafforzano l'ottimismo collettivo di fronte all'incertezza del futuro.",
+    "La ritualità propiziatoria del Capodanno funziona come meccanismo simbolico di esorcismo dell'imprevisto, trasformando la speranza in gesto condiviso."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Che cosa si mangia in Italia la notte del 31 dicembre per portare fortuna?",
+      "opciones": [
+        "Le lenticchie.",
+        "Il cocomero.",
+        "La granita alla mandorla."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer y segundo párrafo (A1): 'si mangiano le lenticchie'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Di che colore deve essere un indumento portafortuna a Capodanno in Italia?",
+      "opciones": [
+        "Rosso.",
+        "Grigio.",
+        "Nero."
+      ],
+      "correcta": 0,
+      "explicacion": "Tradición italiana (A2): 'indossare qualcosa di rosso a Capodanno'."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Perché le lenticchie simboleggiano la prosperità economica?",
+      "opciones": [
+        "Perché la loro forma rotonda ricorda le monete.",
+        "Perché crescono solo sugli alberi d'oro.",
+        "Perché costano moltissimo."
+      ],
+      "correcta": 0,
+      "explicacion": "Explicación cultural (B1) del segundo párrafo."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Come si risponde tradizionalmente all'augurio 'In bocca al lupo!' in italiano?",
+      "opciones": [
+        "Crepi il lupo! (o 'Viva il lupo!').",
+        "Buon appetito!",
+        "Arrivederci a domani!"
+      ],
+      "correcta": 0,
+      "explicacion": "Expresión idiomática esencial (B2)."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Quale effetto producono le superstizioni di fine anno nonostante l'ironia?",
+      "opciones": [
+        "Rafforzano l'ottimismo collettivo di fronte all'incertezza del futuro.",
+        "Generano paura e pessimismo in tutta la popolazione.",
+        "Impediscono di festeggiare in compagnia."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico psicológico/social (C1) del quinto párrafo."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Come agisce la ritualità propiziatoria del Capodanno nella conclusione?",
+      "opciones": [
+        "Come meccanismo simbolico di esorcismo dell'imprevisto che trasforma la speranza in gesto condiviso.",
+        "Come norma giuridica vincolante per i cittadini.",
+        "Come rifiuto totale delle tradizioni popolari."
+      ],
+      "correcta": 0,
+      "explicacion": "Registro antropológico/culto (C2) del sexto párrafo."
+    }
+  ]
+}

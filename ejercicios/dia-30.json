@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 30 - L'arte del presepe napoletano",
+  "titulo": "Sfida Quotidiana: L'arte del presepe napoletano (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "È domenica e mancano pochi giorni a Natale! In molte case italiane, accanto all'albero, c'è il presepe con piccole statuine di pastori, animali e casette.",
+    "In italiano gli aggettivi concordano in genere e numero con il nome: 'una statuina piccola', 'un presepe antico', 'le strade strette', 'i pastori colorati'.",
+    "La città più famosa al mondo per questa tradizione è Napoli: nella celebre via San Gregorio Armeno gli artigiani lavorano tutto l'anno per creare statuine.",
+    "Nel presepe napoletano la scena sacra della Natività si mescola con la vita quotidiana del Settecento: ci sono il fornaio, il pescivendolo, l'oste e persino personaggi moderni.",
+    "Questa straordinaria teatralità popolaresca trasforma la rappresentazione religiosa in un affresco vivente della società partenopea.",
+    "L'arte presepiale napoletana realizza una sintesi barocca tra sacro e profano, in cui il tempo storico della città si fonde con l'eternità del mito natalizio."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Che cosa c'è accanto all'albero in molte case italiane?",
+      "opciones": [
+        "Il presepe.",
+        "La piscina.",
+        "La lavatrice."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1): 'accanto all'albero, c'è il presepe'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Quale concordanza tra nome e aggettivo è corretta in italiano?",
+      "opciones": [
+        "I pastori colorati.",
+        "I pastori colorata.",
+        "Le statuine piccolo."
+      ],
+      "correcta": 0,
+      "explicacion": "Concordancia masculino plural (A2): 'i pastori colorati'."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Qual è la celebre strada di Napoli famosa per gli artigiani del presepe?",
+      "opciones": [
+        "Via San Gregorio Armeno.",
+        "Via Montenapoleone.",
+        "Piazza San Marco."
+      ],
+      "correcta": 0,
+      "explicacion": "Cultura italiana (B1) del tercer párrafo."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Quali personaggi popolari compaiono nel presepe napoletano accanto alla Natività?",
+      "opciones": [
+        "Il fornaio, il pescivendolo, l'oste e persino personaggi moderni.",
+        "Solo astronauti e piloti d'aereo.",
+        "Esclusivamente animali marini."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión cultural (B2) del cuarto párrafo."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. In che cosa si trasforma la rappresentazione religiosa grazie alla teatralità napoletana?",
+      "opciones": [
+        "In un affresco vivente della società partenopea.",
+        "In una lezione astratta di geometria.",
+        "In una cerimonia silenziosa senza figure."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico crítico/artístico (C1) del quinto párrafo."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Quale sintesi estetica realizza l'arte presepiale napoletana nella conclusione?",
+      "opciones": [
+        "Una sintesi barocca tra sacro e profano che fonde tempo storico e mito natalizio.",
+        "Una separazione rigida tra arte popolare e cultura urbana.",
+        "Una copia minimalista priva di riferimenti storici."
+      ],
+      "correcta": 0,
+      "explicacion": "Registro culto/estético (C2) del sexto párrafo."
+    }
+  ]
+}

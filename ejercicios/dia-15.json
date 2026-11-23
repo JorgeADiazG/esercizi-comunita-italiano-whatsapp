@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 15 - Prepariamo l'albero di Natale",
+  "titulo": "Sfida Quotidiana: Prepariamo l'albero di Natale (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "È sabato e molte famiglie preparano le decorazioni di Natale in casa! Mettono l'albero in salotto, le luci colorate e una stella in cima.",
+    "Per descrivere dove mettiamo gli oggetti si usano le preposizioni di luogo: 'sotto l'albero', 'sopra il tavolo', 'accanto alla finestra', 'davanti alla porta'.",
+    "In Italia la tradizione vuole che l'albero di Natale e il presepe si preparino intorno all'8 dicembre, anche se molti anticipano al primo fine settimana del mese.",
+    "Scegliere insieme le palline di vetro, i nastri rossi e le lucine crea un'atmosfera calda e accogliente che trasforma la casa durante le sere d'inverno.",
+    "Oltre all'aspetto estetico, l'allestimento domestico delle festività rappresenta un rituale intergenerazionale in cui ogni addobbo conserva un ricordo familiare.",
+    "La ritualità dell'ornamento natalizio risponde al bisogno antropologico di addomesticare il buio invernale attraverso la luce simbolica e la memoria affettiva."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Dove mettono l'albero di Natale molte famiglie?",
+      "opciones": [
+        "In salotto.",
+        "In garage.",
+        "In giardino sotto la pioggia."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1): 'Mettono l'albero in salotto'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Dove si mettono di solito i regali rispetto all'albero di Natale?",
+      "opciones": [
+        "Sotto l'albero.",
+        "Dentro il frigorifero.",
+        "Sul tetto."
+      ],
+      "correcta": 0,
+      "explicacion": "Preposiciones de lugar (A2): 'sotto l'albero'."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Quando si preparano tradizionalmente l'albero e il presepe in Italia?",
+      "opciones": [
+        "Intorno all'8 dicembre.",
+        "Il 15 agosto.",
+        "A Pasqua."
+      ],
+      "correcta": 0,
+      "explicacion": "Tradición italiana (B1) del tercer párrafo."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Quale effetto produce decorare la casa insieme secondo il quarto paragrafo?",
+      "opciones": [
+        "Crea un'atmosfera calda e accogliente nelle sere d'inverno.",
+        "Rende la casa più fredda e silenziosa.",
+        "Costringe tutti a uscire di casa."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión descriptiva (B2)."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Perché l'allestimento delle festività è definito un 'rituale intergenerazionale'?",
+      "opciones": [
+        "Perché coinvolge diverse generazioni e ogni addobbo custodisce un ricordo familiare.",
+        "Perché è vietato ai bambini partecipare.",
+        "Perché si comprano decorazioni nuove ogni settimana."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico cultural (C1) del quinto párrafo."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. A quale bisogno antropologico risponde l'ornamento natalizio nella conclusione?",
+      "opciones": [
+        "Addomesticare il buio invernale attraverso la luce simbolica e la memoria affettiva.",
+        "Ostentare ricchezza materiale davanti ai vicini.",
+        "Sostituire completamente l'illuminazione elettrica."
+      ],
+      "correcta": 0,
+      "explicacion": "Registro antropológico/ensayístico (C2) del último párrafo."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 29 - Sabato di vacanza a caccia di regali",
+  "titulo": "Sfida Quotidiana: Sabato di vacanza a caccia di regali (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "È sabato mattina e siamo in vacanza! Le strade del centro sono piene di persone che cercano il regalo perfetto per amici e familiari.",
+    "In italiano il pronome relativo 'che' unisce due frasi: 'Cerco un libro che parli dell'Italia', 'Ho trovato la sciarpa che volevo comprare'.",
+    "Tra librerie, negozi di artigianato e pasticcerie, scegliere un pensiero personale richiede pazienza, fantasia e attenzione ai gusti di chi lo riceverà.",
+    "Spesso il regalo più apprezzato non è quello più costoso, ma quello scelto pensando davvero alla storia e alle passioni della persona amata.",
+    "Nella cultura del dono, l'oggetto materiale funge da mediatore simbolico di affetto, gratitudine e riconoscimento reciproco.",
+    "L'etica del regalo autentico si sottrae alla logica standardizzata del consumo per farsi gesto ermeneutico di attenzione verso l'alterità."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Che cosa cercano le persone nelle strade del centro sabato mattina?",
+      "opciones": [
+        "Il regalo perfetto per amici e familiari.",
+        "Un ufficio postale chiuso.",
+        "Una scuola aperta."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1): 'cercano il regalo perfetto per amici e familiari'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Quale parola unisce due frasi nella struttura 'Ho trovato la sciarpa ___ volevo comprare'?",
+      "opciones": [
+        "Che.",
+        "Chi.",
+        "Dove."
+      ],
+      "correcta": 0,
+      "explicacion": "Pronombre relativo invariable (A2): 'che'."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Che cosa richiede scegliere un pensiero personale según il terzo paragrafo?",
+      "opciones": [
+        "Pazienza, fantasia e attenzione ai gusti di chi lo riceverà.",
+        "Solo molta fretta e nessun interesse.",
+        "Di comprare sempre lo stesso oggetto per tutti."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión (B1)."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Qual è spesso il regalo più apprezzato segundo il quarto paragrafo?",
+      "opciones": [
+        "Quello scelto pensando davvero alla storia e alle passioni della persona.",
+        "Esclusivamente quello con il prezzo più alto.",
+        "Un biglietto anonimo senza firma."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión de matices (B2)."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Quale ruolo svolge l'oggetto nella cultura del dono?",
+      "opciones": [
+        "Funge da mediatore simbolico di affetto, gratitudine e riconoscimento.",
+        "Serve solo a misurare il reddito del donatore.",
+        "Sostituisce qualsiasi dialogo familiare."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico antropológico (C1) del quinto párrafo."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. A quale logica si sottrae l'etica del regalo autentico nella conclusione?",
+      "opciones": [
+        "Alla logica standardizzata del consumo, facendosi gesto di attenzione verso l'altro.",
+        "Alla tradizione della reciprocità sociale.",
+        "Alla cura estetica della confezione."
+      ],
+      "correcta": 0,
+      "explicacion": "Registro filosófico/culto (C2) del sexto párrafo."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 10 - Com'è andato il fine settimana?",
+  "titulo": "Sfida Quotidiana: Com'è andato il fine settimana? (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "È lunedì mattina e inizia la seconda settimana del trimestre. Al lavoro e a scuola tutti chiedono ai colleghi: 'Ciao! Com'è andato il fine settimana?'",
+    "Per raccontare gli spostamenti del weekend al passato prossimo, molti verbi di movimento usano l'ausiliare 'essere' e accordano il participio: 'Sono andato al mare', 'Siamo tornati tardi', 'Maria è partita'.",
+    "C'è chi ha visitato i parenti fuori città, chi è rimasto a casa a guardare film e chi ha fatto una passeggiata nel parco prima del rientro.",
+    "Superare il classico 'san lunedì' diventa più semplice quando si condivide un aneddoto divertente del sabato o della domenica davanti a un caffè.",
+    "La narrazione informale del fine settimana svolge un'importante funzione di coesione sociale negli ambienti lavorativi e didattici.",
+    "Sul piano pragmatico, lo scambio rituale sulle attività domenicali funge da lubrificante relazionale che attenua la frattura tra la sfera privata e l'adempimento istituzionale."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Che cosa chiedono spesso i colleghi il lunedì mattina?",
+      "opciones": [
+        "Com'è andato il fine settimana?",
+        "Quanti anni hai?",
+        "Dov'è la stazione?"
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1): 'tutti chiedono ai colleghi: Com'è andato il fine settimana?'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Quale frase usa correttamente l'ausiliare 'essere' al passato prossimo?",
+      "opciones": [
+        "Maria ha partito ieri.",
+        "Maria è partita ieri.",
+        "Maria sono partita ieri."
+      ],
+      "correcta": 1,
+      "explicacion": "Concordancia con 'essere' (A2): el participio concuerda en género y número ('Maria è partita')."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Che cosa hanno fatto alcune persone durante il weekend secondo il testo?",
+      "opciones": [
+        "Hanno visitato i parenti, guardato film o passeggiato nel parco.",
+        "Hanno lavorato senza sosta per quarantotto ore.",
+        "Sono andate tutte in aeroporto."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión (B1) del tercer párrafo."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Che cosa rende più facile superare il lunedì mattina según il cuarto paragrafo?",
+      "opciones": [
+        "Condividere un aneddoto divertente del weekend davanti a un caffè.",
+        "Non parlare con nessuno fino a venerdì.",
+        "Dormire in ufficio."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión de matices cotidianos (B2)."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Quale funzione svolge il racconto del fine settimana a scuola e al lavoro?",
+      "opciones": [
+        "Una funzione di coesione sociale tra colleghi e compagni.",
+        "Una valutazione formale delle competenze tecniche.",
+        "Un modo per evitare qualsiasi collaborazione."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico abstracto (C1): 'svolge un'importante funzione di coesione sociale'."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Come viene definito lo scambio rituale sulle attività domenicali nella conclusione?",
+      "opciones": [
+        "Un lubrificante relazionale che attenua la frattura tra sfera privata e adempimento istituzionale.",
+        "Un obbligo burocratico imposto dai regolamenti aziendali.",
+        "Una digressione superflua che riduce la produttività."
+      ],
+      "correcta": 0,
+      "explicacion": "Registro pragmático/ensayístico (C2) del último párrafo."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 16 - Il Natale quando ero piccolo",
+  "titulo": "Sfida Quotidiana: Il Natale quando ero piccolo (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "Domenica pomeriggio è il momento perfetto per ricordare l'infanzia. Quando eravamo bambini, aspettavamo dicembre con grande emozione!",
+    "In italiano, per descrivere abitudini e situazioni del passato, si usa l'imperfetto: 'Quando ero piccolo, scrivevo la letterina', 'Andavamo dai nonni', 'Faceva molto freddo'.",
+    "Da bambini credevamo nella magia delle feste, contavamo i giorni sul calendario e restavamo svegli fino a tardi per ascoltare i racconti degli adulti.",
+    "Oggi il ritmo della vita adulta rende la domenica sempre troppo breve, ma basta un profumo di cannella o una vecchia fotografia per tornare indietro nel tempo.",
+    "La nostalgia dell'infanzia non è semplice rimpianto, bensì una risorsa emotiva che permette di riconnettersi con lo stupore originario davanti alle piccole cose.",
+    "Nella memoria autobiografica, il tempo festivo dell'infanzia si cristallizza come una dimensione mitica sottratta all'usura cronologica della quotidianità."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Come aspettavamo dicembre quando eravamo bambini?",
+      "opciones": [
+        "Con grande emozione.",
+        "Con molta noia.",
+        "Senza saperlo."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1): 'aspettavamo dicembre con grande emozione'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Quale tempo verbale si usa per descrivere abitudini ripetute nel passato ('scrivevo', 'andavamo')?",
+      "opciones": [
+        "L'imperfetto.",
+        "Il futuro anteriore.",
+        "L'imperativo."
+      ],
+      "correcta": 0,
+      "explicacion": "Gramática básica (A2): el 'imperfetto' expresa hábitos y descripciones en el pasado."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Che cosa facevano i bambini secondo il terzo paragrafo?",
+      "opciones": [
+        "Contavano i giorni sul calendario e ascoltavano i racconti degli adulti.",
+        "Lavoravano in fabbrica.",
+        "Guidavano l'automobile."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión narrativa (B1)."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Che cosa basta oggi per 'tornare indietro nel tempo' la domenica pomeriggio?",
+      "opciones": [
+        "Un profumo di cannella o una vecchia fotografia.",
+        "Una macchina del tempo elettronica.",
+        "Un biglietto ferroviario internazionale."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión de lenguaje figurado (B2) del cuarto párrafo."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Come viene reinterpretata la nostalgia dell'infanzia nel quinto paragrafo?",
+      "opciones": [
+        "Come una risorsa emotiva che riconnette con lo stupore originario.",
+        "Come un ostacolo patologico alla maturità.",
+        "Come una totale perdita di memoria."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico psicológico (C1)."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Come si configura il tempo festivo dell'infanzia nella memoria autobiografica?",
+      "opciones": [
+        "Come una dimensione mitica sottratta all'usura cronologica della quotidianità.",
+        "Come una sequenza precisa di date fiscali.",
+        "Come un periodo privo di qualsiasi significato simbolico."
+      ],
+      "correcta": 0,
+      "explicacion": "Registro literario/filosófico (C2) del sexto párrafo."
+    }
+  ]
+}

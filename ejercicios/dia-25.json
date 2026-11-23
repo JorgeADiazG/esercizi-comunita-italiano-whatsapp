@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 25 - Inviti e cene degli auguri",
+  "titulo": "Sfida Quotidiana: Inviti e cene degli auguri (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "A metà dicembre cominciano le cene degli auguri tra amici, compagni di corso e colleghi! In Messico si celebrano le 'posadas', mentre in Italia ci si riunisce a tavola.",
+    "Per invitare qualcuno in italiano si dice: 'Ti va di venire a cena venerdì?', 'Sei libero domani sera?'. Per accettare: 'Volentieri!', 'Con molto piacere!'.",
+    "Quando invece non possiamo andare, è importante rifiutare con gentilezza e spiegare il motivo: 'Mi dispiace, ma ho già un impegno', 'Purtroppo non posso'.",
+    "Queste serate informali servono a brindare ai risultati raggiunti durante l'anno e a scambiarsi gli auguri prima che ognuno parta per le vacanze.",
+    "La convivialità pre-natalizia rafforza il senso di appartenenza ai gruppi sociali, trasformando colleghi e compagni di studio in una comunità solidale.",
+    "Il brindisi augurale di fine corso costituisce un rito di passaggio comunitario che sancisce simbolicamente la chiusura di un ciclo condiviso."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Che cosa comincia a metà dicembre tra amici e colleghi?",
+      "opciones": [
+        "Le cene degli auguri.",
+        "Gli esami di luglio.",
+        "La raccolta delle olive estive."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1): 'cominciano le cene degli auguri'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Qual è un modo naturale per accettare un invito in italiano?",
+      "opciones": [
+        "Volentieri! / Con molto piacere!",
+        "Mai nella vita!",
+        "Ieri sera!"
+      ],
+      "correcta": 0,
+      "explicacion": "Funciones comunicativas básicas (A2) del segundo párrafo."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Come si rifiuta un invito con gentilezza in italiano?",
+      "opciones": [
+        "Dicendo 'Mi dispiace, ma ho già un impegno'.",
+        "Chiudendo il telefono senza rispondere.",
+        "Dicendo 'Non mi interessa parlare con te'."
+      ],
+      "correcta": 0,
+      "explicacion": "Cortesía comunicativa (B1) del tercer párrafo."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. A che cosa servono queste serate informali prima delle vacanze?",
+      "opciones": [
+        "A brindare ai risultati dell'anno e scambiarsi gli auguri.",
+        "A compilare moduli fiscali.",
+        "A preparare i bagagli in ufficio."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión (B2) del cuarto párrafo."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Che cosa rafforza la convivialità pre-natalizia secondo il quinto paragrafo?",
+      "opciones": [
+        "Il senso di appartenenza ai gruppi sociali.",
+        "La competizione individuale tra studenti.",
+        "L'isolamento domestico."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico sociológico (C1)."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Come viene interpretato il brindisi augurale di fine corso nella conclusione?",
+      "opciones": [
+        "Come un rito di passaggio comunitario che sancisce la chiusura di un ciclo condiviso.",
+        "Come una formalità burocratica obbligatoria.",
+        "Come un evento puramente commerciale."
+      ],
+      "correcta": 0,
+      "explicacion": "Registro antropológico (C2) del sexto párrafo."
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 36 - Che cos'è Santo Stefano?",
+  "titulo": "Sfida Quotidiana: Che cos'è Santo Stefano? (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "Oggi è sabato 26 dicembre! In Italia anche oggi è giorno di festa nazionale e si chiama Santo Stefano.",
+    "Dopo il grande pranzo di Natale, il 26 dicembre molte persone fanno una bella passeggiata in centro, vanno al cinema oppure mangiano gli avanzi del giorno prima.",
+    "Questa festività è stata introdotta nel calendario civile italiano nel 1947 per prolungare il riposo natalizio e permettere alle famiglie di stare ancora insieme.",
+    "Mentre in Messico il 26 dicembre è un giorno lavorativo normale (tranne per chi è in vacanza), in Italia negozi e uffici restano chiusi.",
+    "Il giorno di Santo Stefano funge da cuscinetto distensivo dopo l'intensità emotiva e gastronomica del 25 dicembre, favorendo una socialità più informale.",
+    "Sul piano istituzionale, la festività del 26 dicembre testimonia l'attenzione del calendario civile italiano nel tutelare la dimensione comunitaria delle feste invernali."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Come si chiama il giorno di festa del 26 dicembre in Italia?",
+      "opciones": [
+        "Santo Stefano.",
+        "San Valentino.",
+        "Ferragosto."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1): 'si chiama Santo Stefano'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Che cosa mangiano spesso gli italiani il 26 dicembre a pranzo?",
+      "opciones": [
+        "Gli avanzi del pranzo di Natale.",
+        "Solo frutta esotica.",
+        "Niente fino a Capodanno."
+      ],
+      "correcta": 0,
+      "explicacion": "Vocabulario cotidiano (A2): 'gli avanzi' = el recalentado / las sobras."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Quando è stata introdotta la festa di Santo Stefano nel calendario civile italiano?",
+      "opciones": [
+        "Nel 1947.",
+        "Nel 2020.",
+        "Nell'epoca romana."
+      ],
+      "correcta": 0,
+      "explicacion": "Dato histórico (B1) del tercer párrafo."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Qual è la differenza tra Messico e Italia il 26 dicembre?",
+      "opciones": [
+        "In Italia è festivo nazionale con uffici chiusi, mentre in Messico è un giorno feriale.",
+        "In Messico è festivo nazionale e in Italia si lavora.",
+        "In entrambi i paesi si celebrano le elezioni."
+      ],
+      "correcta": 0,
+      "explicacion": "Contraste cultural (B2) del cuarto párrafo."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Che funzione svolge Santo Stefano dopo il 25 dicembre?",
+      "opciones": [
+        "Funge da cuscinetto distensivo che favorisce una socialità più informale.",
+        "Impone nuovi obblighi formali e burocratici.",
+        "Segna l'inizio immediato degli esami."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico figurado/preciso (C1) del quinto párrafo."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Che cosa testimonia sul piano istituzionale la festività del 26 dicembre?",
+      "opciones": [
+        "L'attenzione del calendario civile italiano nel tutelare la dimensione comunitaria delle feste.",
+        "La volontà di ridurre i giorni di riposo invernale.",
+        "L'abolizione delle tradizioni popolari."
+      ],
+      "correcta": 0,
+      "explicacion": "Registro institucional/ensayístico (C2) del sexto párrafo."
+    }
+  ]
+}

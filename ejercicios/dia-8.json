@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 08 - Sabato mattina al mercato",
+  "titulo": "Sfida Quotidiana: Sabato mattina al mercato (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "Sabato mattina molte famiglie vanno al mercato del quartiere per comprare frutta fresca, verdura, formaggi e pane appena sfornato.",
+    "Davanti alle bancarelle si chiedono i prezzi e le quantità: 'Quanto costano queste mele?', 'Vorrei mezzo chilo di pomodori e due etti di prosciutto crudo'.",
+    "In Italia il peso dei salumi e dei formaggi si misura spesso in 'etti': un etto equivale a cento grammi, quindi due etti sono duecento grammi.",
+    "I mercati rionali sono luoghi vivaci dove i venditori gridano le offerte del giorno e consigliano ai clienti i prodotti di stagione più saporiti.",
+    "Nonostante la concorrenza della grande distribuzione, la spesa al mercato conserva un rapporto fiduciario diretto tra produttore e consumatore.",
+    "Il mercato settimanale si configura come un presidio di biodiversità gastronomica e memoria urbana, capace di resistere all'omologazione dei consumi."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Che cosa comprano le famiglie il sabato mattina al mercato?",
+      "opciones": [
+        "Frutta fresca, verdura, formaggi e pane.",
+        "Automobili e motociclette.",
+        "Biglietti aerei."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1): 'comprare frutta fresca, verdura, formaggi e pane'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. A quanti grammi corrisponde 'un etto' in Italia?",
+      "opciones": [
+        "A dieci grammi.",
+        "A cento grammi.",
+        "A mille grammi."
+      ],
+      "correcta": 1,
+      "explicacion": "Dato práctico indispensable en Italia (A2): 'un etto equivale a cento grammi'."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Che cosa fanno i venditori davanti alle bancarelle dei mercati rionali?",
+      "opciones": [
+        "Gridano le offerte del giorno e consigliano i prodotti di stagione.",
+        "Leggono libri in silenzio.",
+        "Chiudono alle otto di mattina."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión (B1): 'i venditori gridano le offerte del giorno e consigliano ai clienti i prodotti di stagione'."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Che cosa si intende per 'grande distribuzione' nel quinto paragrafo?",
+      "opciones": [
+        "I supermercati e gli ipermercati.",
+        "I piccoli orti familiari.",
+        "I corrieri postali."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico económico/cotidiano (B2): 'grande distribuzione' (GDO) designa las cadenas de supermercados."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Quale elemento distingue la spesa al mercato rispetto al supermercato?",
+      "opciones": [
+        "Il rapporto fiduciario diretto tra venditore e cliente.",
+        "L'assenza totale di prodotti freschi.",
+        "Il pagamento esclusivo in valuta estera."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico preciso (C1): 'un rapporto fiduciario diretto tra produttore e consumatore'."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Come viene definito il mercato settimanale nella conclusione del testo?",
+      "opciones": [
+        "Un presidio di biodiversità gastronomica e memoria urbana.",
+        "Un residuo economico destinato a scomparire.",
+        "Un centro commerciale puramente turistico."
+      ],
+      "correcta": 0,
+      "explicacion": "Registro ensayístico (C2): 'un presidio di biodiversità gastronomica e memoria urbana'."
+    }
+  ]
+}

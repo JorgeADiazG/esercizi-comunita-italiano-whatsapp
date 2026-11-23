@@ -1,0 +1,81 @@
+{
+  "actividad": "Reto 06 - Organizziamo il weekend",
+  "titulo": "Sfida Quotidiana: Organizziamo il weekend (A1 → C2)",
+  "modo": "lectura_progresiva",
+  "parrafos": [
+    "Giovedì pomeriggio gli amici iniziano a scriversi messaggi per organizzare il fine settimana. C'è chi vuole andare al cinema e chi preferisce restare a casa.",
+    "In italiano le preposizioni cambiano a seconda del luogo: si dice 'andare in montagna', 'andare al mare', 'andare a teatro', ma 'andare da Marco' quando si visita una persona.",
+    "Spesso i gruppi di compagni di classe o di lavoro creano una chat per decidere l'orario dell'incontro, il mezzo di trasporto e il locale dove cenare insieme.",
+    "Nonostante i buoni propositi del giovedì, accade frequentemente che i programmi subiscano variazioni all'ultimo momento a causa del traffico o degli imprevisti familiari.",
+    "La pianificazione condivisa del tempo libero riflette il desiderio di bilanciare gli obblighi feriali con momenti autentici di svago e complicità relazionale.",
+    "Nell'ecosistema comunicativo contemporaneo, la negoziazione digitale degli incontri sociali oscilla costantemente tra la spontaneità dell'improvvisazione e l'iper-organizzazione."
+  ],
+  "preguntas": [
+    {
+      "nivel": "A1",
+      "pregunta": "1. Quando iniziano a scriversi gli amici per organizzare il fine settimana?",
+      "opciones": [
+        "Giovedì pomeriggio.",
+        "Lunedì notte.",
+        "Domenica a mezzanotte."
+      ],
+      "correcta": 0,
+      "explicacion": "Primer párrafo (A1): 'Giovedì pomeriggio gli amici iniziano a scriversi messaggi'."
+    },
+    {
+      "nivel": "A2",
+      "pregunta": "2. Quale preposizione si usa in italiano davanti al nome di una persona (es. Marco)?",
+      "opciones": [
+        "In Marco.",
+        "Da Marco.",
+        "Su Marco."
+      ],
+      "correcta": 1,
+      "explicacion": "Regla clave de preposiciones (A2): se usa 'da' + persona ('andare da Marco')."
+    },
+    {
+      "nivel": "B1",
+      "pregunta": "3. Che cosa decidono di solito i compagni nella chat del gruppo?",
+      "opciones": [
+        "L'orario dell'incontro, il trasporto e il locale dove cenare.",
+        "I voti degli esami universitari.",
+        "Il meteo del mese prossimo."
+      ],
+      "correcta": 0,
+      "explicacion": "Comprensión (B1): 'decidere l'orario dell'incontro, il mezzo di trasporto e il locale dove cenare'."
+    },
+    {
+      "nivel": "B2",
+      "pregunta": "4. Che cosa significa 'subire variazioni all'ultimo momento'?",
+      "opciones": [
+        "Essere confermati con sei mesi di anticipo.",
+        "Cambiare proprio poco prima dell'orario previsto.",
+        "Non avere mai alcun programma."
+      ],
+      "correcta": 1,
+      "explicacion": "Locución adverbial (B2): 'all'ultimo momento' = a última hora."
+    },
+    {
+      "nivel": "C1",
+      "pregunta": "5. Che cosa esprime la pianificazione condivisa del tempo libero secondo il quinto paragrafo?",
+      "opciones": [
+        "Il bisogno di bilanciare gli obblighi feriali con momenti di svago autentico.",
+        "L'incapacità di restare soli per cinque minuti.",
+        "La volontà di trasformare il weekend in lavoro."
+      ],
+      "correcta": 0,
+      "explicacion": "Léxico abstracto (C1) del quinto párrafo."
+    },
+    {
+      "nivel": "C2",
+      "pregunta": "6. Tra quali poli oscilla la negoziazione digitale degli incontri sociali?",
+      "opciones": [
+        "Tra il silenzio assoluto e le lettere cartacee.",
+        "Tra la spontaneità dell'improvvisazione e l'iper-organizzazione.",
+        "Tra il lavoro d'ufficio e lo sport agonistico."
+      ],
+      "correcta": 1,
+      "explicacion": "Registro ensayístico (C2): 'oscilla costantemente tra la spontaneità dell'improvvisazione e l'iper-organizzazione'."
+    }
+  ]
+}
